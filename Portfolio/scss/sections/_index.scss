@@ -1,3 +1,13 @@
 /* =============
     Index
 ============= */
+
+#index{
+    //love hate
+    a:link, a:visited{ color: (--DBlue);
+
+    }
+    A:hover, a:active{ color: --LBlue;
+
+    }
+}

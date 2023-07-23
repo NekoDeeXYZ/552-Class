@@ -2,9 +2,15 @@
     Base
 ============= */
 body{
-    background-color: lightgrey ;
+    background-color: --LGrey ;
 }
 .content-grid{
-display:grid;
+display: grid;
 grid-template-columns: 16px auto 16px;
+grid-template-columns: " . content . "
+
+.content-grid-item{
+    background-color: --White;
+    grid-area: content;
+}
 }

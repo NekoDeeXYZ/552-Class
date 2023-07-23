@@ -346,6 +346,12 @@ body {
   display: grid;
   -ms-grid-columns: 16px auto 16px;
   grid-template-columns: 16px auto 16px;
+  -ms-grid-columns: " . content . ";
+  grid-template-columns: " . content . ";
+}
+.content-grid .content-grid-item {
+  background-color: white;
+  grid-area: content;
 }
 
 /* =============
