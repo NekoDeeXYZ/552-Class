@@ -4,10 +4,10 @@
 
 #index{
     //love hate
-    a:link, a:visited{ color: (--DBlue);
+    a:link, a:visited{ color: var(--DBlue);
 
     }
-    A:hover, a:active{ color: --LBlue;
+    A:hover, a:active{ color: var(--LBlue);
 
     }
 }
