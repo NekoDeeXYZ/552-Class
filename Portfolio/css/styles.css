@@ -15,6 +15,7 @@ html {
   --white: #ffffff;
   --DYellow:#f4c366;
   --LYellow:#fbdea9;
+  --Orange: #CD7F32;
   --DBlue:#7484a4;
   --LBlue:#a4b4cc;
   --DGrey:#424240;
@@ -352,19 +353,16 @@ body {
 .content-grid-item {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  background-color: var(--white);
   grid-area: content;
 }
 
-#main-content-right {
+section {
+  background-color: var(--white);
+  grid-area: s;
+}
+
+aside {
   background-color: var(--LBlue);
-}
-#main-content-right a:link, #main-content-right a:visited {
-  color: var(--BYellow);
-  text-decoration: none;
-}
-#main-content-right a:hover, #main-content-right a:active {
-  color: var(Orange);
 }
 
 /* =============
@@ -400,14 +398,14 @@ textarea {
     Header
 ============= */
 header {
-  background-color: var(--LYellow);
+  background-color: var(--DYellow);
 }
 header a:link, header a:visited {
   color: var(--DBlue);
   text-decoration: none;
 }
 header a:hover, header a:active {
-  color: var(--LBlue);
+  color: var(--Orange);
 }
 
 /* =============
@@ -441,12 +439,8 @@ footer {
 /* =============
     Index
 ============= */
-#index a:link, #index a:visited {
-  color: var(--DBlue);
-  text-decoration: none;
-}
-#index a:hover, #index a:active {
-  color: var(--LBlue);
+aside {
+  background-color: var(--LBlue);
 }
 
 /* =============

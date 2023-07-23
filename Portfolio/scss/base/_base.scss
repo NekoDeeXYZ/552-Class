@@ -11,19 +11,13 @@ body{
 }
 
 .content-grid-item{
-    background-color: var(--white);
     grid-area: content;
 }
 
-.me-content-right{
-    //love hate
-    background-color: var(--LBlue);
-    a:link, a:visited{ color: var(--DYellow);
-    text-decoration: none;
-    }
-    a:hover, a:active{ color: var(--Orange);
-    }
+section{
+    background-color: var(--white);
+    grid-area: s;
 }
-#header{
-    background-color: var(--DYellow)
+aside{
+    background-color: var(--LBlue)
 }
