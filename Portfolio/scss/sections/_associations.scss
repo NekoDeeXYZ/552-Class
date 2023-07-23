@@ -1,3 +1,15 @@
 /* =============
     Associations
 ============= */
+#association{
+    //love //hate
+    a:link, a:visited{ color: var(--DBlue);
+    text-decoration: none;
+    }
+    a:hover, a:active{ color: var(--LBlue);
+
+    }
+}
+#current{
+    background-color: lightcyan;
+}

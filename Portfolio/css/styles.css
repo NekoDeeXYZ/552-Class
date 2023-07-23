@@ -338,7 +338,7 @@ template {
     Base
 ============= */
 body {
-  background-color: lightgrey;
+  background-color: var(--LGrey);
 }
 
 .content-grid {
@@ -346,12 +346,25 @@ body {
   display: grid;
   -ms-grid-columns: 16px auto 16px;
   grid-template-columns: 16px auto 16px;
-  -ms-grid-columns: " . content . ";
-  grid-template-columns: " . content . ";
+      grid-template-areas: ". content .";
 }
-.content-grid .content-grid-item {
-  background-color: white;
+
+.content-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  background-color: var(--white);
   grid-area: content;
+}
+
+#main-content-right {
+  background-color: var(--LBlue);
+}
+#main-content-right a:link, #main-content-right a:visited {
+  color: var(--BYellow);
+  text-decoration: none;
+}
+#main-content-right a:hover, #main-content-right a:active {
+  color: var(Orange);
 }
 
 /* =============
@@ -386,21 +399,56 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  background-color: var(--LYellow);
+}
+header a:link, header a:visited {
+  color: var(--DBlue);
+  text-decoration: none;
+}
+header a:hover, header a:active {
+  color: var(--LBlue);
+}
+
 /* =============
     Footer
 ============= */
+footer {
+  background-color: var(--LYellow);
+}
+
 /* =============
     About
 ============= */
 /* =============
     Associations
 ============= */
+#association a:link, #association a:visited {
+  color: var(--DBlue);
+  text-decoration: none;
+}
+#association a:hover, #association a:active {
+  color: var(--LBlue);
+}
+
+#current {
+  background-color: lightcyan;
+}
+
 /* =============
     Contacts
 ============= */
 /* =============
     Index
 ============= */
+#index a:link, #index a:visited {
+  color: var(--DBlue);
+  text-decoration: none;
+}
+#index a:hover, #index a:active {
+  color: var(--LBlue);
+}
+
 /* =============
     Projects
 ============= */

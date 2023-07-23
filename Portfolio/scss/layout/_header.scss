@@ -1,3 +1,13 @@
 /* =============
     Header
 ============= */
+
+header{
+    background-color: var(--LYellow);
+    a:link, a:visited{ color: var(--DBlue);
+        text-decoration: none;
+        }
+        a:hover, a:active{ color: var(--LBlue);
+    
+        }
+}
