@@ -3,11 +3,32 @@
 ============= */
 
 header{
-    background-color: var(--DYellow);
+    background-color: var(--LYellow);
     a:link, a:visited{ color: var(--DBlue);
         text-decoration: none;
         }
         a:hover, a:active{ color: var(--Orange);
     
         }
+}
+.banner{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "ho pr as";
+}
+.banner-piece{
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#ho{
+    grid-area: ho;
+}
+#pr{
+    grid-area: pr;
+}
+#as{
+    grid-area: as;
 }

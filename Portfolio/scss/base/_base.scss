@@ -1,23 +1,79 @@
 /* =============
     Base
 ============= */
+html{
+    height: 100%
+}
 body{
     background-color: var(--LGrey) ;
+    height: 100%;
 }
+main{
+    height: 100%;
+}
+
 .content-grid{
     display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". content .";
+    height: 100%;
+    grid-template-rows: repeat(4, auto auto Fill auto);
+    grid-template-areas:
+    "h" 
+    "a"
+    "s"
+    "f" ;
 }
 
-.content-grid-item{
-    grid-area: content;
+
+@media screen and (min-width: 150px){
+    .content-grid{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+        grid-template-rows: repeat(3, auto Fill auto);
+        grid-template-areas:
+        "h h h h h" 
+        ". s s a ."
+        "f f f f f" ;
+    }
 }
 
+
+@media screen and (min-width: 180px){
+    .content-grid{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+        grid-template-rows: repeat(3, 10% Fill 5%);
+        grid-template-areas:
+        "h h h h h" 
+        ". s s a ."
+        "f f f f f" ;
+    }
+}
+
+
+.bannerpeice{
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+header{
+    grid-area: h;
+    text-align: center;
+}
 section{
     background-color: var(--white);
     grid-area: s;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 aside{
-    background-color: var(--LBlue)
+    background-color: var(--LBlue);
+    grid-area: a;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+footer{
+    grid-area: f;
+    text-align: center;
 }
