@@ -338,7 +338,14 @@ template {
     Base
 ============= */
 body {
-  background-color: red;
+  background-color: lightgrey;
+}
+
+.content-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
 }
 
 /* =============
