@@ -18,9 +18,12 @@ body{
 .me-content-right{
     //love hate
     background-color: var(--LBlue);
-    a:link, a:visited{ color: var(--BYellow);
+    a:link, a:visited{ color: var(--DYellow);
     text-decoration: none;
     }
     a:hover, a:active{ color: var(--Orange);
     }
+}
+#header{
+    background-color: var(--DYellow)
 }
