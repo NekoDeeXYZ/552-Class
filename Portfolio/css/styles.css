@@ -13,6 +13,12 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --DYellow:#f4c366;
+  --LYellow:#fbdea9;
+  --DBlue:#7484a4;
+  --LBlue:#a4b4cc;
+  --DGrey:#424240;
+  --LGrey:#b7b2b5;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -365,4 +371,22 @@ textarea {
 ============= */
 /* =============
     Footer
+============= */
+/* =============
+    About
+============= */
+/* =============
+    Associations
+============= */
+/* =============
+    Contacts
+============= */
+/* =============
+    Index
+============= */
+/* =============
+    Projects
+============= */
+/* =============
+    Resume
 ============= */
