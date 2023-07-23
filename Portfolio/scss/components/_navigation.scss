@@ -2,3 +2,12 @@
     Navigation
 ============= */
 
+#main-content-right{
+    //love hate
+    background-color: var(--LBlue);
+    a:link, a:visited{ color: var(--BYellow);
+    text-decoration: none;
+    }
+    a:hover, a:active{ color: var(--Orange);
+    }
+}
