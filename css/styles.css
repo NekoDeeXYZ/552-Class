@@ -352,6 +352,19 @@ body {
   padding-right: 16px;
   background-color: var(--white);
 }
+@media (min-width: 1024px) {
+  .main-content .Recipe {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+    grid-row: 10% 15% auto;
+        grid-template-areas: "h h" "mk qt" "ig md";
+  }
+  .main-content .Recipe #R-Quote {
+    background-color: var(--LLSage);
+  }
+}
 @media (min-width: 1200px) {
   .main-content {
     background-color: var(--Grey);
@@ -401,11 +414,50 @@ h3 {
   padding-right: 16px;
 }
 
+#H {
+  grid-area: h;
+}
+
 #R-Quote {
+  grid-area: qt;
   background-color: var(--white);
   text-align: center;
-  padding-left: 32px;
-  padding-right: 32px;
+}
+
+#R-Make {
+  grid-area: mk;
+}
+
+#R-Ingredient {
+  grid-area: ig;
+}
+
+#R-Method {
+  grid-area: md;
+}
+
+@media (min-width: 1024px) {
+  #H {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #R-Quote {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #R-Make {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #R-Ingredient {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #R-Method {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
 }
 
 /* =============

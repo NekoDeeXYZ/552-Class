@@ -2,6 +2,9 @@
     Base
 ============= */
 
+body{
+background-color: var(--Grey);
+}
 
 .main-content{
     display: grid;
@@ -9,17 +12,25 @@
     grid-template-areas: ". content .";
     padding-left: 16px;
     padding-right: 16px;
-    @include sm {
-        background-color: red;
+    background-color: var(--white);
+
+
+    @include lg {
+        .Recipe{
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-row: 10% 15% auto;
+            grid-template-areas: 
+            "h h"
+            "mk qt"
+            "ig md";
+            #R-Quote{
+                background-color: var(--LLSage);
+            }
+        }
     }
-    @include md {
-        background-color: orange;
-    }@include lg {
-        background-color: yellow;
-    }@include xl {
-        background-color: greenyellow;
-    }@include xxl {
-        background-color: green;
+    @include xl{
+        background-color: var(--Grey);
     }
     #mc-items{
         grid-area: content;
@@ -62,9 +73,20 @@ h3{
     padding-left: 16px;
     padding-right: 16px;
 }
+#H{
+    grid-area: h;
+}
 #R-Quote{
+    grid-area: qt;
     background-color: var(--white);
     text-align: center;
-    padding-left: 32px;
-    padding-right: 32px;
+}
+#R-Make{
+    grid-area: mk ;
+}
+#R-Ingredient{
+    grid-area: ig;
+}
+#R-Method{
+    grid-area: md;
 }
