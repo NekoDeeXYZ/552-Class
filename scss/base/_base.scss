@@ -2,9 +2,36 @@
     Base
 ============= */
 
-body{
-background-color: var(--Grey);
+
+.main-content{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". content .";
+    padding-left: 16px;
+    padding-right: 16px;
+    @include sm {
+        background-color: red;
+    }
+    @include md {
+        background-color: orange;
+    }@include lg {
+        background-color: yellow;
+    }@include xl {
+        background-color: greenyellow;
+    }@include xxl {
+        background-color: green;
+    }
+    #mc-items{
+        grid-area: content;
+       
+    }
 }
+
+
+#pot{
+    width: 100%;
+}
+
 .Recipe {
     background-color: var(--LLSage);
     padding-left: 16px;

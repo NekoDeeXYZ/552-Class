@@ -342,6 +342,31 @@ body {
   background-color: var(--Grey);
 }
 
+.main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". content .";
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--white);
+}
+@media (min-width: 1200px) {
+  .main-content {
+    background-color: var(--Grey);
+  }
+}
+.main-content #mc-items {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+}
+
+#pot {
+  width: 100%;
+}
+
 .Recipe {
   background-color: var(--LLSage);
   padding-left: 16px;
