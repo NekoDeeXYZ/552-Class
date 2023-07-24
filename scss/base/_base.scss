@@ -2,4 +2,42 @@
     Base
 ============= */
 
+body{
+background-color: var(--Grey);
+}
+.Recipe {
+    background-color: var(--LLSage);
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
+.Story{
+    background: var(--Sage);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+h1{
+    background-color: var(--DBasil);
+    color: var(--LLSage);
+    text-decoration: underline;
+    text-decoration-color: var(--LSage);
+    text-align: center;
+}
+h2{
+    background-color: var(--LBasil);
+    color: var(--LLSage);
+    text-decoration: underline;
+    text-decoration-color: var(--LSage);
+    text-align: center;
+}
+h3{
+    background-color: var(--LSage);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#R-Quote{
+    background-color: var(--white);
+    text-align: center;
+    padding-left: 32px;
+    padding-right: 32px;
+}
