@@ -361,7 +361,7 @@ main {
       grid-template-areas: "h" "a" "s" "f";
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 450px) {
   .content-grid {
     display: -ms-grid;
     display: grid;
@@ -423,7 +423,7 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 450px) {
   header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
