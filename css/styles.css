@@ -361,6 +361,18 @@ main {
       grid-template-areas: "h" "a" "s" "f";
 }
 
+@media screen and (max-width: 450px) {
+  .grid-item {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: (auto auto auto)[3];
+    grid-template-rows: repeat(3, auto auto auto);
+    -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
+    grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+        grid-template-areas: ". mn mn mn ." ". mt mt mt ." "ma . mc . mr";
+  }
+}
 @media screen and (min-width: 450px) {
   .content-grid {
     display: -ms-grid;
@@ -414,6 +426,51 @@ aside {
   grid-area: a;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+#me_talk {
+  grid-area: mt;
+}
+
+#me_about {
+  grid-area: ma;
+}
+
+#me_contact {
+  grid-area: mc;
+}
+
+#me_resume {
+  grid-area: mr;
+}
+
+#name {
+  grid-area: mn;
+}
+
+@media screen and (max-width: 450px) {
+  #me_talk {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
+  #me_about {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #me_contact {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  #me_resume {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  #name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
 }
 
 footer {

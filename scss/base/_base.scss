@@ -30,9 +30,9 @@ main{
        grid-template-rows: repeat(3, auto auto auto);
        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
        grid-template-areas:
-       ". Name Name Name ." 
-       ". me_talk me_talk me_talk ."
-       "me_about . me_contact . me_resume"
+       ". mn mn mn ." 
+       ". mt mt mt ."
+       "ma . mc . mr"
    }
    
 }
@@ -85,7 +85,22 @@ aside{
     padding-left: 16px;
     padding-right: 16px;
 }
-.
+#me_talk{
+    grid-area: mt ;
+}
+#me_about{
+    grid-area: ma ;
+}
+#me_contact{
+    grid-area: mc ;
+}
+#me_resume{
+    grid-area: mr ;
+}
+#name{
+    grid-area: mn ;
+}
+
 footer{
     grid-area: f;
     text-align: center;
