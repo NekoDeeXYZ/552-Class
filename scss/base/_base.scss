@@ -23,6 +23,20 @@ main{
     "f" ;
 }
 
+@media  screen and (max-width: 450px) {
+    .grid-item{
+        display: grid;
+       height: 100%;
+       grid-template-rows: repeat(3, auto auto auto);
+       grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+       grid-template-areas:
+       ". Name Name Name ." 
+       ". me_talk me_talk me_talk ."
+       "me_about . me_contact . me_resume"
+   }
+   
+}
+
 @media screen and (min-width: 450px){
     .content-grid{
         display: grid;
@@ -71,6 +85,7 @@ aside{
     padding-left: 16px;
     padding-right: 16px;
 }
+.
 footer{
     grid-area: f;
     text-align: center;
