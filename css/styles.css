@@ -361,30 +361,6 @@ main {
       grid-template-areas: "h" "a" "s" "f";
 }
 
-@media screen and (min-width: 150px) {
-  .content-grid {
-    display: -ms-grid;
-    display: grid;
-    height: 100%;
-    -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
-    grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-    -ms-grid-rows: (auto Fill auto)[3];
-    grid-template-rows: repeat(3, auto Fill auto);
-        grid-template-areas: "h h h h h" ". s s a ." "f f f f f";
-  }
-}
-@media screen and (min-width: 180px) {
-  .content-grid {
-    display: -ms-grid;
-    display: grid;
-    height: 100%;
-    -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
-    grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-    -ms-grid-rows: (10% Fill 5%)[3];
-    grid-template-rows: repeat(3, 10% Fill 5%);
-        grid-template-areas: "h h h h h" ". s s a ." "f f f f f";
-  }
-}
 .bannerpeice {
   height: 100%;
   padding-left: 16px;
@@ -421,50 +397,6 @@ footer {
   -ms-grid-column: 1;
   grid-area: f;
   text-align: center;
-}
-
-@media screen and (min-width: 150px) {
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-  }
-  aside {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-  }
-  footer {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-}
-
-@media screen and (min-width: 180px) {
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-  }
-  aside {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-  }
-  footer {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
 }
 
 /* =============
@@ -516,7 +448,7 @@ header a:hover, header a:active {
   height: 100%;
   -ms-grid-rows: (1fr)[5];
   grid-template-rows: repeat(5, 1fr);
-      grid-template-areas: "ho pr as";
+      grid-template-areas: ". ho pr as .";
 }
 
 .banner-piece {
@@ -527,19 +459,19 @@ header a:hover, header a:active {
 
 #ho {
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: ho;
 }
 
 #pr {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: pr;
 }
 
 #as {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: as;
 }
 
