@@ -23,8 +23,7 @@ main{
     "f" ;
 }
 
-@media  screen and (max-width: 450px) {
-    .grid-item{
+.grid-item{
         display: grid;
        height: 100%;
        grid-template-rows: repeat(3, auto auto auto);
@@ -34,8 +33,6 @@ main{
        ". mt mt mt ."
        "ma . mc . mr"
    }
-   
-}
 
 @media screen and (min-width: 450px){
     .content-grid{
