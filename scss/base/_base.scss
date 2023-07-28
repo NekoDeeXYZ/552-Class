@@ -26,7 +26,7 @@ main{
 #me_aside {
         display: grid;
        height: 100%;
-       grid-template-rows: repeat(3, Fill auto auto);
+       grid-template-rows: repeat(3, 1fr);
        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
        grid-template-areas:
        ". mn mn mn ." 
@@ -84,6 +84,7 @@ aside{
 }
 #me_talk{
     grid-area: mt ;
+    padding-top: 5px;
 }
 #me_about{
     grid-area: ma ;
@@ -96,6 +97,7 @@ aside{
 }
 #name{
     grid-area: mn ;
+    padding-bottom: 5px;
 }
 
 footer{

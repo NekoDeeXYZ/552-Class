@@ -365,8 +365,8 @@ main {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (Fill auto auto)[3];
-  grid-template-rows: repeat(3, Fill auto auto);
+  -ms-grid-rows: (1fr)[3];
+  grid-template-rows: repeat(3, 1fr);
   -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
   grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
       grid-template-areas: ". mn mn mn ." ". mt mt mt ." "ma . mc . mr";
@@ -432,6 +432,7 @@ aside {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: mt;
+  padding-top: 5px;
 }
 
 #me_about {
@@ -457,6 +458,7 @@ aside {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: mn;
+  padding-bottom: 5px;
 }
 
 footer {
