@@ -365,8 +365,8 @@ main {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (auto auto auto)[3];
-  grid-template-rows: repeat(3, auto auto auto);
+  -ms-grid-rows: (Fill auto auto)[3];
+  grid-template-rows: repeat(3, Fill auto auto);
   -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
   grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
       grid-template-areas: ". mn mn mn ." ". mt mt mt ." "ma . mc . mr";
