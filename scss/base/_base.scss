@@ -22,46 +22,9 @@ main{
     "s"
     "f" ;
 }
-@media screen and (min-width: 10px) {
-    .content-grid{
-    display: grid;
-    height: 100%;
-    grid-template-rows: repeat(4, auto auto Fill auto);
-    grid-template-areas:
-    "h" 
-    "a"
-    "s"
-    "f" ;
-    }
-}
 
 
-@media screen and (min-width: 300px){
-    .content-grid{
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-        grid-template-rows: repeat(3, auto Fill auto);
-        grid-template-areas:
-        "h h h h h" 
-        ". s s a ."
-        "f f f f f" ;
-    }
-}
 
-
-@media screen and (min-width: 480px){
-    .content-grid{
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-        grid-template-rows: repeat(3, 10% Fill 5%);
-        grid-template-areas:
-        "h h h h h" 
-        ". s s a ."
-        "f f f f f" ;
-    }
-}
 
 
 .bannerpeice{
