@@ -361,15 +361,15 @@ main {
       grid-template-areas: "h" "a" "s" "f";
 }
 
-#me_aside {
+.me-links {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (1fr)[3];
-  grid-template-rows: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[1];
+  grid-template-rows: repeat(1, 1fr);
   -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
   grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-      grid-template-areas: ". mn mn mn ." ". mt mt mt ." "ma . mc . mr";
+      grid-template-areas: "ma . mc . mr";
 }
 
 @media screen and (min-width: 450px) {
@@ -428,37 +428,29 @@ aside {
 }
 
 #me_talk {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
   grid-area: mt;
-  padding-top: 5px;
 }
 
 #me_about {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: ma;
 }
 
 #me_contact {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: mc;
 }
 
 #me_resume {
-  -ms-grid-row: 3;
+  -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: mr;
 }
 
 #name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
   grid-area: mn;
-  padding-bottom: 5px;
 }
 
 footer {
