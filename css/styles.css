@@ -361,7 +361,7 @@ main {
       grid-template-areas: "h" "a" "s" "f";
 }
 
-.grid-item {
+#me_aside {
   display: -ms-grid;
   display: grid;
   height: 100%;
