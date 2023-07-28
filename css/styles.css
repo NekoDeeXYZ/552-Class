@@ -549,8 +549,8 @@ header a:hover, header a:active {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (1fr)[5];
-  grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
       grid-template-areas: ". ho pr as .";
 }
 
