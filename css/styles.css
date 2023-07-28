@@ -356,18 +356,20 @@ main {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (auto auto Fill auto)[4];
-  grid-template-rows: repeat(4, auto auto Fill auto);
-      grid-template-areas: "h" "a" "s" "f";
+  -ms-grid-rows: (auto FILL FILL auto)[4];
+  grid-template-rows: repeat(4, auto FILL FILL auto);
+      grid-template-areas: "h" "s" "a" "f";
 }
 
 .me-links {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (1fr)[5];
-  grid-template-rows: repeat(5, 1fr);
-      grid-template-areas: "ma . mc . mr";
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "mn mn mn" "mt mt mt" "ma mc mr";
 }
 
 .links {
@@ -376,28 +378,26 @@ main {
   padding-right: 16px;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 580px) {
   .content-grid {
     display: -ms-grid;
     display: grid;
     height: 100%;
-    -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
-    grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+    -ms-grid-columns: (5% 35% 35% 20% 5%)[5];
+    grid-template-columns: repeat(5, 5% 35% 35% 20% 5%);
     -ms-grid-rows: (auto Fill auto)[3];
     grid-template-rows: repeat(3, auto Fill auto);
         grid-template-areas: "h h h h h" ". s s a ." "f f f f f";
   }
-}
-@media screen and (min-width: 480px) {
-  .content-grid {
+  .me-links {
     display: -ms-grid;
     display: grid;
     height: 100%;
-    -ms-grid-columns: (5% 30% 30% 30% 5%)[5];
-    grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-    -ms-grid-rows: (10% Fill 5%)[3];
-    grid-template-rows: repeat(3, 10% Fill 5%);
-        grid-template-areas: "h h h h h" ". s s a ." "f f f f f";
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "mn" "mt" "ma" "mr" "mc";
   }
 }
 header {
@@ -408,7 +408,7 @@ header {
 }
 
 section {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   background-color: var(--white);
   grid-area: s;
@@ -417,7 +417,7 @@ section {
 }
 
 aside {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   background-color: var(--LBlue);
   grid-area: a;
@@ -425,30 +425,63 @@ aside {
   padding-right: 16px;
 }
 
+#name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: mn;
+  text-align: center;
+}
+
 #me_talk {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: mt;
+  text-align: center;
 }
 
 #me_about {
-  -ms-grid-row: 1;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: ma;
 }
 
 #me_contact {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: mc;
 }
 
 #me_resume {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: mr;
 }
 
-#name {
-  grid-area: mn;
+@media screen and (min-width: 580px) {
+  #name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #me_talk {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #me_about {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #me_contact {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  #me_resume {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
 }
 
 footer {
@@ -458,29 +491,7 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 450px) {
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-  }
-  aside {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-  }
-  footer {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 580px) {
   header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -549,9 +560,9 @@ header a:hover, header a:active {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-columns: (1fr)[5];
-  grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: ". ho pr as .";
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "ho pr as";
 }
 
 .banner-piece {
@@ -562,19 +573,19 @@ header a:hover, header a:active {
 
 #ho {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: ho;
 }
 
 #pr {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: pr;
 }
 
 #as {
   -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-column: 3;
   grid-area: as;
 }
 

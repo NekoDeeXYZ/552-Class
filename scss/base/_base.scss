@@ -15,20 +15,23 @@ main{
 .content-grid{
     display: grid;
     height: 100%;
-    grid-template-rows: repeat(4, auto auto Fill auto);
+    grid-template-rows: repeat(4, auto FILL FILL auto);
     grid-template-areas:
     "h" 
-    "a"
     "s"
+    "a"
     "f" ;
 }
 
 .me-links{
     display: grid;
     height: 100%;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-    "ma . mc . mr";
+    "mn mn mn"
+    "mt mt mt"
+    "ma mc mr";
 }
 .links{
     height: 100%;
@@ -37,30 +40,28 @@ main{
 }
 
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 580px){
     .content-grid{
         display: grid;
         height: 100%;
-        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
+        grid-template-columns: repeat(5, 5% 35% 35% 20% 5%);
         grid-template-rows: repeat(3, auto Fill auto);
         grid-template-areas:
         "h h h h h" 
         ". s s a ."
         "f f f f f" ;
     }
-}
-
-
-@media screen and (min-width: 480px){
-    .content-grid{
+    .me-links{
         display: grid;
         height: 100%;
-        grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-        grid-template-rows: repeat(3, 10% Fill 5%);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-        "h h h h h" 
-        ". s s a ."
-        "f f f f f" ;
+        "mn"
+        "mt"
+        "ma"
+        "mr"
+        "mc";
     }
 }
 
@@ -81,8 +82,14 @@ aside{
     padding-left: 16px;
     padding-right: 16px;
 }
+
+#name{
+    grid-area: mn ;
+    text-align: center;
+}
 #me_talk{
     grid-area: mt ;
+    text-align: center;
 }
 #me_about{
     grid-area: ma ;
@@ -92,9 +99,6 @@ aside{
 }
 #me_resume{
     grid-area: mr ;
-}
-#name{
-    grid-area: mn ;
 }
 
 footer{
