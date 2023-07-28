@@ -22,6 +22,18 @@ main{
     "s"
     "f" ;
 }
+@media screen and (min-width: 10px) {
+    .content-grid{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(4, auto auto Fill auto);
+    grid-template-areas:
+    "h" 
+    "a"
+    "s"
+    "f" ;
+    }
+}
 
 
 @media screen and (min-width: 150px){
