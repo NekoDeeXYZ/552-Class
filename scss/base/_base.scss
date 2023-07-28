@@ -24,13 +24,18 @@ main{
 }
 
 .me-links{
-        display: grid;
-       height: 100%;
-       grid-template-rows: repeat(1, 1fr);
-       grid-template-columns: repeat(5, 5% 30% 30% 30% 5%);
-       grid-template-areas:
-       "ma . mc . mr"
-   }
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "ma . mc . mr";
+}
+.links{
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 
 @media screen and (min-width: 450px){
     .content-grid{
@@ -59,11 +64,7 @@ main{
     }
 }
 
-.bannerpeice{
-    height: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-}
+
 header{
     grid-area: h;
     text-align: center;
