@@ -16,9 +16,12 @@ html {
   --DYellow:#f4c366;
   --LYellow:#fbdea9;
   --LYellow50: #f7dfb4f5;
+  --LLYellow: #faf1e1;
+  --LLLYellow: #fffcf7;
   --Orange: #CD7F32;
   --DBlue:#7484a4;
   --LBlue:#a4b4cc;
+  --LLBlue:#dbe8fc;
   --DGrey:#424240;
   --LGrey:#b7b2b5;
 }
@@ -345,6 +348,8 @@ html {
 
 body {
   background-color: var(--LGrey);
+  background-image: s;
+  background-repeat: repeat-y;
   height: 100%;
 }
 
@@ -404,7 +409,6 @@ header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: h;
-  text-align: center;
 }
 
 section {
@@ -516,6 +520,71 @@ footer {
 /* =============
     Typography
 ============= */
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 0 margin 0;
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+h2 {
+  text-decoration: underline;
+  background-color: var(--LLYellow);
+  color: var(--Orange);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: larger;
+}
+
+h3 {
+  text-decoration: underline;
+  background-color: var(--LLLYellow);
+  color: var(--Orange);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: large;
+}
+
+h4 {
+  color: var(--Orange);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.quote {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  text-align: center;
+  padding-block: 0;
+}
+
+h5 {
+  background-color: var(--DBlue);
+  color: var(--LLBlue);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: large;
+}
+
+aside {
+  font-family: "Merriweather", serif;
+  font-weight: 200;
+  font-size: medium;
+}
+
 /* =============
     Buttons
 ============= */
@@ -547,6 +616,8 @@ textarea {
 ============= */
 header {
   background-color: var(--LYellow);
+  background-image: image();
+  text-align: center;
 }
 header a:link, header a:visited {
   color: var(--DBlue);

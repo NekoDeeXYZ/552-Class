@@ -4,6 +4,8 @@
 
 header{
     background-color: var(--LYellow);
+    background-image: image();
+    text-align: center;
     a:link, a:visited{ color: var(--DBlue);
         text-decoration: none;
         }

@@ -6,6 +6,8 @@ html{
 }
 body{
     background-color: var(--LGrey) ;
+    background-image: (s) ;
+    background-repeat: repeat-y;
     height: 100%;
 }
 main{
@@ -68,7 +70,6 @@ main{
 
 header{
     grid-area: h;
-    text-align: center;
 }
 section{
     background-color: var(--white);
