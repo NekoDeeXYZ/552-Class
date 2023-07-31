@@ -42,7 +42,21 @@ main{
 }
 
 
-@media screen and (min-width: 580px){
+@media screen and (min-width: 500px){
+    .content-grid{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(5, 5% 35% 35% 20% 5%);
+        grid-template-rows: repeat(4, auto Fill 10% auto);
+        grid-template-areas:
+        "h h h h h" 
+        ". s s s ."
+        ". a a a ."
+        "f f f f f" ;
+    }
+}
+
+@media screen and (min-width: 800px){
     .content-grid{
         display: grid;
         height: 100%;
@@ -56,14 +70,15 @@ main{
     .me-links{
         display: grid;
         height: 100%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 100px 10% 10% 10% 10% auto);
         grid-template-areas:
-        "mn"
-        "mt"
-        "ma"
-        "mr"
-        "mc";
+        "mn mn mn"
+        "mt mt mt"
+        ". ma ."
+        ". mr ."
+        ". mc ."
+        " . . . ";
     }
 }
 
@@ -87,6 +102,8 @@ aside{
 #name{
     grid-area: mn ;
     text-align: center;
+    background-color: var(--DBlue);
+    background-repeat: repeat;
 }
 #me_talk{
     grid-area: mt ;
@@ -94,12 +111,15 @@ aside{
 }
 #me_about{
     grid-area: ma ;
+    text-align: center;
 }
 #me_contact{
     grid-area: mc ;
+    text-align: center;
 }
 #me_resume{
     grid-area: mr ;
+    text-align: center;
 }
 
 footer{

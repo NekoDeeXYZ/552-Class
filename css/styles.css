@@ -15,10 +15,8 @@ html {
   --white: #ffffff;
   --DYellow:#f4c366;
   --LYellow:#fbdea9;
-  --LYellow50: #f7dfb4f5;
-  --LLYellow: #faf1e1;
   --LLLYellow: #fffcf7;
-  --Orange: #CD7F32;
+  --Orange: #c76d13;
   --DBlue:#7484a4;
   --LBlue:#a4b4cc;
   --LLBlue:#dbe8fc;
@@ -383,7 +381,19 @@ main {
   padding-right: 16px;
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 500px) {
+  .content-grid {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-columns: (5% 35% 35% 20% 5%)[5];
+    grid-template-columns: repeat(5, 5% 35% 35% 20% 5%);
+    -ms-grid-rows: (auto Fill 10% auto)[4];
+    grid-template-rows: repeat(4, auto Fill 10% auto);
+        grid-template-areas: "h h h h h" ". s s s ." ". a a a ." "f f f f f";
+  }
+}
+@media screen and (min-width: 800px) {
   .content-grid {
     display: -ms-grid;
     display: grid;
@@ -398,11 +408,11 @@ main {
     display: -ms-grid;
     display: grid;
     height: 100%;
-    -ms-grid-columns: (1fr)[5];
-    grid-template-columns: repeat(5, 1fr);
-    -ms-grid-rows: (1fr)[3];
-    grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "mn" "mt" "ma" "mr" "mc";
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (100px 10% 10% 10% 10% auto)[6];
+    grid-template-rows: repeat(6, 100px 10% 10% 10% 10% auto);
+        grid-template-areas: "mn mn mn" "mt mt mt" ". ma ." ". mr ." ". mc ." " . . . ";
   }
 }
 header {
@@ -435,6 +445,8 @@ aside {
   -ms-grid-column-span: 3;
   grid-area: mn;
   text-align: center;
+  background-color: var(--DBlue);
+  background-repeat: repeat;
 }
 
 #me_talk {
@@ -449,42 +461,45 @@ aside {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: ma;
+  text-align: center;
 }
 
 #me_contact {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: mc;
+  text-align: center;
 }
 
 #me_resume {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: mr;
+  text-align: center;
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 800px) {
   #name {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
+    -ms-grid-column-span: 3;
   }
   #me_talk {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
+    -ms-grid-column-span: 3;
   }
   #me_about {
     -ms-grid-row: 3;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
   }
   #me_contact {
     -ms-grid-row: 5;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
   }
   #me_resume {
     -ms-grid-row: 4;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
   }
 }
 
@@ -495,7 +510,30 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 500px) {
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
+  aside {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
+  footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+}
+
+@media screen and (min-width: 800px) {
   header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -509,6 +547,7 @@ footer {
   aside {
     -ms-grid-row: 2;
     -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
   }
   footer {
     -ms-grid-row: 3;
@@ -534,55 +573,77 @@ h1 {
   text-align: center;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 h2 {
   text-decoration: underline;
-  background-color: var(--LLYellow);
+  text-align: center;
+  background-color: var(--LLLYellow);
   color: var(--Orange);
   font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: larger;
+  font-weight: 500;
+  font-size: x-large;
 }
 
 h3 {
   text-decoration: underline;
   background-color: var(--LLLYellow);
   color: var(--Orange);
-  text-align: center;
   font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: large;
+  font-weight: 500;
+  font-size: larger;
 }
 
 h4 {
   color: var(--Orange);
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: medium;
-}
-
-.quote {
-  font-family: "Caveat", cursive;
-  font-weight: 500;
-  text-align: center;
-  padding-block: 0;
+  font-size: large;
 }
 
 h5 {
+  font-size: x-large;
+  text-align: center;
   background-color: var(--DBlue);
   color: var(--LLBlue);
-  text-align: center;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: large;
 }
 
 aside {
   font-family: "Merriweather", serif;
   font-weight: 200;
   font-size: medium;
+}
+
+.other {
+  background-color: var(--LLBlue);
+  color: var(--DBlue);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.others {
+  background-color: var(--LLBlue);
+  color: var(--DBlue);
+}
+.others a:link, .others a:visited {
+  color: var(--DGrey);
+  text-decoration: none;
+  background-color: var(--LLBlue);
+}
+.others a:hover, .others a:active {
+  color: var(--Orange);
+  background-color: var(--LLBlue);
+}
+
+.quote {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: x-large;
+  text-align: center;
+  padding-block: 0;
 }
 
 /* =============
@@ -670,6 +731,23 @@ footer {
 /* =============
     About
 ============= */
+.bigwords {
+  font-size: x-large;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  color: var(--DBlue);
+  background-color: var(--LLBlue);
+}
+
+.favorite {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: x-large;
+  color: var(--DBlue);
+  text-align: center;
+  padding-block: 0;
+}
+
 /* =============
     Associations
 ============= */

@@ -21,50 +21,71 @@ h1{
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
-    font-size: x-large;
+    font-size: xx-large;
 }
 h2{
     text-decoration: underline;
-    background-color: var(--LLYellow);
+    text-align: center;
+    background-color: var(--LLLYellow);
     color: var(--Orange);
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: larger;
+    font-weight: 500;
+    font-size: x-large;
 }
-
 h3{
     text-decoration: underline;
     background-color: var(--LLLYellow);
     color: var(--Orange);
-    text-align: center;
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-size: large;
+    font-weight: 500;
+    font-size: larger;
 }
 h4{
     color: var(--Orange);
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    font-size: medium;
-}
-.quote{
-    font-family: 'Caveat', cursive;
-    font-weight: 500;
-    text-align: center;
-    padding-block: 0;
-}
-
-h5{
-    background-color: var(--DBlue);
-    color: var(--LLBlue);
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
     font-size: large;
 }
-
+h5{
+    font-size: x-large;
+    text-align: center;
+    background-color: var(--DBlue);
+    color: var(--LLBlue);
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
 aside{
     font-family: 'Merriweather', serif;
     font-weight: 200;
     font-size: medium;
+}
+
+//stuff used in specific areas
+
+//used on alternate areas in project and associations
+.other{
+    background-color: var(--LLBlue);
+    color: var(--DBlue);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.others{
+    background-color: var(--LLBlue);
+    color: var(--DBlue);
+    a:link, a:visited{ color: var(--DGrey);
+        text-decoration: none;
+        background-color: var(--LLBlue);
+        }
+        a:hover, a:active{ color: var(--Orange);
+        background-color: var(--LLBlue);
+        }
+}
+
+//used on fun aside, quote from home page, 
+.quote{
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+    padding-block: 0;
 }
