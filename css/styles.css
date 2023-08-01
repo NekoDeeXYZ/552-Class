@@ -17,6 +17,7 @@ html {
   --LYellow:#fbdea9;
   --LLLYellow: #fffcf7;
   --Orange: #c76d13;
+  --DOrange: #a85807;
   --DBlue:#7484a4;
   --LBlue:#a4b4cc;
   --LLBlue:#dbe8fc;
@@ -364,6 +365,39 @@ main {
       grid-template-areas: "h" "s" "a" "f";
 }
 
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  background-color: var(--white);
+  grid-area: s;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5px;
+  padding: auto;
+}
+
+aside {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  background-color: var(--LBlue);
+  grid-area: a;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .me-links {
   display: -ms-grid;
   display: grid;
@@ -392,6 +426,21 @@ main {
     grid-template-rows: repeat(4, auto Fill 10% auto);
         grid-template-areas: "h h h h h" ". s s s ." ". a a a ." "f f f f f";
   }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
+  aside {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+  }
 }
 @media screen and (min-width: 800px) {
   .content-grid {
@@ -414,31 +463,22 @@ main {
     grid-template-rows: repeat(6, 100px 10% 10% 10% 10% auto);
         grid-template-areas: "mn mn mn" "mt mt mt" ". ma ." ". mr ." ". mc ." " . . . ";
   }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+  aside {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+  }
 }
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: h;
-}
-
-section {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  background-color: var(--white);
-  grid-area: s;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-aside {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  background-color: var(--LBlue);
-  grid-area: a;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 #name {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -511,21 +551,6 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-  }
-  aside {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-  }
   footer {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
@@ -534,21 +559,6 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
-  header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-  }
-  section {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-  }
-  aside {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-  }
   footer {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
@@ -572,15 +582,15 @@ h1 {
   text-decoration: underline;
   text-align: center;
   font-family: "Playfair Display", serif;
+  color: var(--DOrange);
   font-weight: 500;
-  font-size: xx-large;
 }
 
 h2 {
   text-decoration: underline;
   text-align: center;
   background-color: var(--LLLYellow);
-  color: var(--Orange);
+  color: var(--DOrange);
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: x-large;
@@ -772,6 +782,91 @@ footer {
 /* =============
     Projects
 ============= */
+#MLIS {
+  border-style: double;
+  border-color: var(--Orange);
+  background-color: var(--LLLYellow);
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+#MLIS p h4 ul li {
+  margin-left: 5px;
+  background-color: var(--LLLYellow);
+}
+#MLIS h3 {
+  text-align: center;
+  color: var(--DOrange);
+  font-size: larger;
+}
+
+#Book {
+  border-style: double;
+  border-color: var(--Orange);
+  background-color: var(--LLLYellow);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#Book p h4 ul li {
+  margin-left: 5px;
+  background-color: var(--LLLYellow);
+}
+#Book h3 {
+  text-align: center;
+  color: var(--DOrange);
+  font-size: larger;
+}
+
+section .galllery {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  width: auto;
+  -ms-grid-rows: (300px auto 200px)[3];
+  grid-template-rows: repeat(3, 300px auto 200px);
+      grid-template-areas: "bc" " . " "bl";
+}
+@media screen and (min-width: 870px) {
+  section .gallery {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-columns: (300px auto 200px)[3];
+    grid-template-columns: repeat(3, 300px auto 200px);
+        grid-template-areas: "bc . bl";
+  }
+}
+section .gallery-image {
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+section #BookLamp {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: bl;
+  text-align: center;
+}
+section #BookClock {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bc;
+  text-align: center;
+}
+@media screen and (min-width: 870px) {
+  section .gallery > #BookLamp {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  section .gallery > #BookClock {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
 /* =============
     Resume
 ============= */
