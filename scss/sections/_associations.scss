@@ -1,15 +1,71 @@
 /* =============
     Associations
 ============= */
-#association{
+#CompanyC{
     //love //hate
-    a:link, a:visited{ color: var(--DBlue);
-    text-decoration: none;
+    a:link, a:visited{ color: var(--Orange);
+    text-decoration: underline;
     }
-    a:hover, a:active{ color: var(--LBlue);
-
+    a:hover, a:active{ color: var(--DBlue);
+        text-decoration: none;
     }
 }
-#current{
-    background-color: lightcyan;
+#CompanyF{
+    //love //hate
+    a:link, a:visited{ color: var(--Orange);
+    text-decoration: underline;
+    }
+    a:hover, a:active{ color: var(--DBlue);
+        text-decoration: none;
+    }
+}
+#CompanyP{
+    //love //hate
+    a:link, a:visited{ color: var(--DBlue);
+    text-decoration: underline;
+    }
+    a:hover, a:active{ color: var(--DOrange);
+        text-decoration: none;
+    }
+}
+
+
+#Current{
+    border-style: double;
+    border-color: var(--Orange);
+    background-color: var(--LLLYellow);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+    p h4 ul li {
+        margin-left: 5px;
+        background-color: var(--LLLYellow);
+    }
+    h3{
+        text-align: center;
+        color: var(--DOrange);
+        font-size: larger;
+    }
+}
+#Future{
+    border-style: double;
+    border-color: var(--Orange);
+    background-color: var(--LLLYellow);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: fit-content;
+    
+    p h4 ul li {
+        margin-left: 5px;
+        background-color: var(--LLLYellow);
+    }
+    h3{
+        text-align: center;
+        color: var(--DOrange);
+        font-size: larger;
+    }
 }

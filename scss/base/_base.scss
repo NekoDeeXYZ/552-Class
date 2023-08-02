@@ -48,6 +48,12 @@ aside{
     grid-area: a;
     padding-left: 16px;
     padding-right: 16px;
+    a:link, a:visited{ color: var(--DDBlue);
+        text-decoration: underline;
+        }
+    a:hover, a:active{ color: var(--DOrange);
+        text-decoration: none;
+        }
 }
 .me-links{
     display: grid;
@@ -115,6 +121,7 @@ aside{
 #me_talk{
     grid-area: mt ;
     text-align: center;
+    color: var(--DDBlue);
 }
 #me_about{
     grid-area: ma ;

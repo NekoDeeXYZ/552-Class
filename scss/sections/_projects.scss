@@ -29,6 +29,7 @@
     padding-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
+    height: fit-content;
     
     p h4 ul li {
         margin-left: 5px;
@@ -42,11 +43,13 @@
 }
 section{
 
-    .galllery{
+    .gallery{
         display: grid;
         height: 100%;
         width: auto;
-        grid-template-rows: repeat(3,300px auto 200px);
+        padding: 5px;
+        grid-template-rows: (300px 20px 300px);
+        grid-template-columns: repeat(1, 1fr) ;
         grid-template-areas:
         "bc"
         " . "
@@ -56,15 +59,14 @@ section{
         .gallery{
             display: grid;
             height: 100%;
-            grid-template-columns: repeat(3,300px auto 200px);
+            grid-template-rows: repeat(1, 1fr) ;
+            grid-template-columns: (300px auto 200px);
             grid-template-areas:
             "bc . bl" ;
         }
     }
     .gallery-image{
         height: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
     }
     #BookLamp{
         grid-area: bl;
