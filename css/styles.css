@@ -553,6 +553,10 @@ aside a:hover, aside a:active {
   }
 }
 
+#validator {
+  background-color: var(--LYellow);
+}
+
 footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -745,10 +749,6 @@ header a:hover, header a:active {
 /* =============
     Footer
 ============= */
-footer {
-  background-color: var(--LYellow);
-}
-
 /* =============
     About
 ============= */
