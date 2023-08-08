@@ -874,9 +874,7 @@ header a:hover, header a:active {
   border-bottom: 5px;
   border-color: var(--DYellow);
   background-color: var(--LLLYellow);
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill;
+  height: 100%;
   -ms-grid-rows: (auto FILL FILL)[3];
   grid-template-rows: repeat(3, auto FILL FILL);
   -ms-grid-columns: (Fill)[1];
