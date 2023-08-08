@@ -854,11 +854,20 @@ header a:hover, header a:active {
 .contact {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
   width: 70%;
   background-color: var(--LLBlue);
   border-radius: 24px;
   border-color: var(--DBlue);
   border-style: double;
+}
+.contact h3 {
+  font-size: x-large;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-weight: 600;
+  color: var(--DBlue);
+  background-color: var(--LLBlue);
 }
 
 /* =============
