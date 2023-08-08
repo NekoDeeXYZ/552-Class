@@ -558,6 +558,7 @@ footer {
   -ms-grid-column: 1;
   grid-area: f;
   text-align: center;
+  background-color: var(--LYellow);
 }
 
 @media screen and (min-width: 500px) {
