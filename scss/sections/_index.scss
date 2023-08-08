@@ -30,17 +30,7 @@
 
 }
 
-@media screen and (min-width: 1300px){
-    .Index-Images{
-        display: grid;
-        height: 100%;
-        grid-template-rows: repeat(2, 10% auto);
-        grid-template-columns: repeat(3, Fill 100px Fill);
-        grid-template-areas:
-        "t t t" 
-        "d . c";
-    }
-}    
+    
 
 #slide{
     height: 300px;

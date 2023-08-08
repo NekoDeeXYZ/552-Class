@@ -890,18 +890,6 @@ header a:hover, header a:active {
       grid-template-areas: "t" "d" "c";
 }
 
-@media screen and (min-width: 1300px) {
-  .Index-Images {
-    display: -ms-grid;
-    display: grid;
-    height: 100%;
-    -ms-grid-rows: (10% auto)[2];
-    grid-template-rows: repeat(2, 10% auto);
-    -ms-grid-columns: (Fill 100px Fill)[3];
-    grid-template-columns: repeat(3, Fill 100px Fill);
-        grid-template-areas: "t t t" "d . c";
-  }
-}
 #slide {
   height: 300px;
   display: block;
@@ -941,22 +929,6 @@ header a:hover, header a:active {
   -ms-grid-column: 1;
   grid-area: d;
   text-align: center;
-}
-
-@media screen and (min-width: 1300px) {
-  .Index-Images > .Top {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-  .Index-Images > .Connor {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-  }
-  .Index-Images > .Dog {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
 }
 
 /* =============
