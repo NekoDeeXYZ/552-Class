@@ -1,37 +1,37 @@
 /* =============
     Index
 ============= */
-#index{
+.index{
     background-color: var(--LLLYellow);
-}
-.Aspirations{
-    background-color: var(--LLLYellow);
-  margin: 5px;
-  p{
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+
+    .Aspirations{
+        background-color: var(--LLLYellow);
+    margin: 5px;
+        p{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+
+    .Index-Images{
+        display: grid;
+        border-top: 5px;
+        border-bottom: 5px;
+        border-color: var(--DYellow);
+        background-color: var(--LLLYellow);
+        height: 100%;
+        grid-template-rows: repeat(3, auto FILL FILL);
+        grid-template-columns: repeat(1, Fill);
+        grid-template-areas:
+        "t" 
+        "d"
+        "c";
+    }
 
 }
 
-.Images{
-    display: grid;
-    border-top: 5px;
-    border-bottom: 5px;
-    border-color: var(--DYellow);
-    background-color: var(--LLLYellow);
-    height: 100%;
-    grid-template-rows: repeat(3, auto FILL FILL);
-    grid-template-columns: repeat(1, Fill);
-    grid-template-areas:
-    "t" 
-    "d"
-    "c";
-}
-
-
-@media screen and (min-width: 1250px){
-    .Images{
+@media screen and (min-width: 1300px){
+    .Index-Images{
         display: grid;
         height: 100%;
         grid-template-rows: repeat(2, 10% auto);
@@ -40,9 +40,9 @@
         "t t t" 
         "d . c";
     }
-}
+}    
 
-#image{
+#slide{
     height: 300px;
     display: block;
     margin-left: auto;

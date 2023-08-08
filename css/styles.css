@@ -854,7 +854,7 @@ header a:hover, header a:active {
 .contact {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 70%;
   background-color: var(--LLBlue);
   border-radius: 24px;
   border-color: var(--DBlue);
@@ -864,20 +864,18 @@ header a:hover, header a:active {
 /* =============
     Index
 ============= */
-#index {
+.index {
   background-color: var(--LLLYellow);
 }
-
-.Aspirations {
+.index .Aspirations {
   background-color: var(--LLLYellow);
   margin: 5px;
 }
-.Aspirations p {
+.index .Aspirations p {
   padding-left: 5px;
   padding-right: 5px;
 }
-
-.Images {
+.index .Index-Images {
   display: -ms-grid;
   display: grid;
   border-top: 5px;
@@ -892,8 +890,8 @@ header a:hover, header a:active {
       grid-template-areas: "t" "d" "c";
 }
 
-@media screen and (min-width: 1250px) {
-  .Images {
+@media screen and (min-width: 1300px) {
+  .Index-Images {
     display: -ms-grid;
     display: grid;
     height: 100%;
@@ -904,7 +902,7 @@ header a:hover, header a:active {
         grid-template-areas: "t t t" "d . c";
   }
 }
-#image {
+#slide {
   height: 300px;
   display: block;
   margin-left: auto;
@@ -945,17 +943,17 @@ header a:hover, header a:active {
   text-align: center;
 }
 
-@media screen and (min-width: 1250px) {
-  .Top {
+@media screen and (min-width: 1300px) {
+  .Index-Images > .Top {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  .Connor {
+  .Index-Images > .Connor {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
   }
-  .Dog {
+  .Index-Images > .Dog {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
