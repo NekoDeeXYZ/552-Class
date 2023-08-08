@@ -957,7 +957,6 @@ section #BookClock {
   background-color: var(--LLLYellow);
 }
 .main h3 {
-  text-align: center;
   color: var(--DOrange);
   font-size: larger;
 }
