@@ -671,6 +671,14 @@ aside {
   padding-block: 0;
 }
 
+#Photo {
+  font-family: "Caveat", cursive;
+  color: var(--DBlue);
+  font-weight: 500;
+  font-size: xx-large;
+  padding-block: 2px;
+}
+
 /* =============
     Buttons
 ============= */
@@ -846,6 +854,105 @@ header a:hover, header a:active {
 /* =============
     Index
 ============= */
+#index {
+  background-color: var(--LLLYellow);
+}
+
+.Aspirations {
+  background-color: var(--LLLYellow);
+  margin: 5px;
+}
+.Aspirations p {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.Images {
+  display: -ms-grid;
+  display: grid;
+  border-top: 5px;
+  border-bottom: 5px;
+  border-color: var(--DYellow);
+  background-color: var(--LLLYellow);
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  -ms-grid-rows: (auto FILL FILL)[3];
+  grid-template-rows: repeat(3, auto FILL FILL);
+  -ms-grid-columns: (Fill)[1];
+  grid-template-columns: repeat(1, Fill);
+      grid-template-areas: "t" "d" "c";
+}
+
+@media screen and (min-width: 1250px) {
+  .Images {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: (10% auto)[2];
+    grid-template-rows: repeat(2, 10% auto);
+    -ms-grid-columns: (Fill 100px Fill)[3];
+    grid-template-columns: repeat(3, Fill 100px Fill);
+        grid-template-areas: "t t t" "d . c";
+  }
+}
+#image {
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#Photo {
+  border-radius: 25px;
+  background: var(--white);
+  margin: 5px;
+  width: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: var(--DDBlue);
+}
+
+.Top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: t;
+  text-align: center;
+}
+
+.Connor {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: c;
+  text-align: center;
+}
+
+.Dog {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: d;
+  text-align: center;
+}
+
+@media screen and (min-width: 1250px) {
+  .Top {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .Connor {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .Dog {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+
 /* =============
     Projects
 ============= */

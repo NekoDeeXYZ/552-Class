@@ -1,7 +1,80 @@
 /* =============
     Index
 ============= */
-
 #index{
+    background-color: var(--LLLYellow);
+}
+.Aspirations{
+    background-color: var(--LLLYellow);
+  margin: 5px;
+  p{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
+}
+
+.Images{
+    display: grid;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-color: var(--DYellow);
+    background-color: var(--LLLYellow);
+    height: fill ;
+    grid-template-rows: repeat(3, auto FILL FILL);
+    grid-template-columns: repeat(1, Fill);
+    grid-template-areas:
+    "t" 
+    "d"
+    "c";
+}
+
+
+@media screen and (min-width: 1250px){
+    .Images{
+        display: grid;
+        height: 100%;
+        grid-template-rows: repeat(2, 10% auto);
+        grid-template-columns: repeat(3, Fill 100px Fill);
+        grid-template-areas:
+        "t t t" 
+        "d . c";
+    }
+}
+
+#image{
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#Photo{
+    border-radius: 25px;
+    background: var(--white);
+    margin: 5px;
+    width: 400px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: var(--DDBlue);
+}
+
+
+
+.Top{
+    grid-area: t ;
+    text-align: center;
+}
+
+.Connor{
+    grid-area: c ;
+    text-align: center;
+}
+
+.Dog{
+    grid-area: d ;
+    text-align: center;
 }
