@@ -2,6 +2,13 @@
     Resume
 ============= */
 
+.bigwords{
+    font-size: x-large;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    color: var(--DBlue);
+    background-color: var(--LLBlue);
+}
 .main{
     border-style: double;
     border-color: var(--Orange);
@@ -22,4 +29,12 @@
 }
 #tab{
     padding-left: 5px;
+}
+.littlewords{
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    font-size: x-large;
+    color: var(--DBlue);
+    text-align: center;
+    padding-block: 0;
 }
