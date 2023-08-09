@@ -13,6 +13,16 @@ html {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --Dpurp: #1A090D;
+  --purp: #4A314D;
+  --Lpurp: #6B6570;
+  --Mgreen: #A8BA9A;
+  --NEON: #ACE894;
+  --orange: #EB5E28;
+  --Dgrey: #252422;
+  --grey: #403D39;
+  --Lgrey: #CCC5B9;
+  --LLgrey: #FFFCF2;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -334,6 +344,110 @@ template {
 /* =============
     Typography
 ============= */
+body h1 {
+  font-family: "Syne Mono", monospace;
+  font-size: large;
+  color: var(--Dgrey);
+}
+body h2 {
+  font-family: "Syne Mono", monospace;
+  font-size: large;
+  color: var(--grey);
+}
+body p {
+  font-family: "Syne", sans-serif;
+  font-size: medium;
+}
+
+.test .test-area-1 {
+  background-color: var(--Lpurp);
+}
+.test .test-area-1 #test11 {
+  font-family: "Annie Use Your Telescope", cursive;
+  color: var(--NEON);
+}
+.test .test-area-1 #test12 {
+  font-family: "Gloria Hallelujah", cursive;
+  color: var(--Dpurp);
+}
+.test .test-area-1 #test13 {
+  font-family: "Permanent Marker", cursive;
+  color: var(--purp);
+  background-color: var(--Mgreen);
+}
+.test .test-area-1 #test14 {
+  font-family: "Schoolbell", cursive;
+  color: var(--Lpurp);
+  background-color: var(--Dpurp);
+}
+.test .test-area-1 #test15 {
+  font-family: "Caveat Brush", cursive;
+  color: var(--NEON);
+  background-color: var(--Dpurp);
+}
+.test .test-area-1 #test16 {
+  font-family: "Advent Pro", sans-serif;
+  color: var(--Dpurp);
+  background-color: var(--NEON);
+}
+.test .test-area-1 #test17 {
+  font-family: "Nothing You Could Do", cursive;
+  color: var(--Mgreen);
+  background-color: var(--purp);
+}
+.test .test-area-2 {
+  background-color: var(--Lgrey);
+}
+.test .test-area-2 #test21 {
+  font-family: "Creepster", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Mgreen);
+  background-color: var(--Dgrey);
+}
+.test .test-area-2 #test22 {
+  font-family: "Handlee", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Dpurp);
+  background-color: var(--grey);
+}
+.test .test-area-2 #test23 {
+  font-family: "Nosifer", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Mgreen);
+  background-color: var(--grey);
+}
+.test .test-area-2 #test24 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Mgreen);
+  background-color: var(--LLgrey);
+}
+.test .test-area-2 #test25 {
+  font-family: "Rubik Glitch", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--NEON);
+  background-color: var(--Dgrey);
+}
+.test .test-area-2 #test26 {
+  font-family: "Rubik Wet Paint", cursive;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Dgrey);
+  background-color: var(--LLgrey);
+}
+.test .test-area-2 #test27 {
+  font-family: "Syne Mono", monospace;
+  text-align: center;
+  font-size: x-large;
+  color: var(--Lgrey);
+  background-color: var(--grey);
+}
+
 /* =============
     Buttons
 ============= */
@@ -363,6 +477,13 @@ textarea {
 /* =============
     Header
 ============= */
+header h1 {
+  font-family: "Syne Tactile", cursive;
+  font-size: xx-large;
+  color: var(--Dgrey);
+  text-align: center;
+}
+
 /* =============
     Footer
 ============= */
