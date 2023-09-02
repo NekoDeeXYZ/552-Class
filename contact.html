@@ -8,39 +8,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Annie+Use+Your+Telescope&family=Bungee+Shade&family=Caveat+Brush&family=Creepster&family=Gloria+Hallelujah&family=Handlee&family=Nosifer&family=Nothing+You+Could+Do&family=Permanent+Marker&family=Press+Start+2P&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Schoolbell&family=Special+Elite&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne+Tactile&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
     <title>GameTober Contact Information</title>
 </head>
 
 <body>
     <header>  
         <h1> <a href="index.html"> GameTober </a></h1> 
-        <nav>
-            <a href="index.html"> Home </a>
-            <a href="faq.html"> FAQ </a>
-            <a href="challenge_rules.html"> Challenge Rules </a>
-            <a href="horror_games.html"> Horror Challenge </a>
-            <a href="mix_games.html"> Mixed Challenge </a>
-            <a href="challenge_creator.html"> Creator </a>
-            <a href="contact.html"> Contact </a>
-        </nav>
+        <div class="Buttons">
+             <div class="dropdown"  id="link-home">
+                <button class="dropdown">   <a href="index.html"> Home </a> </button>
+            </div>
+            <div class="dropdown"  id="link-info">
+                <button class="dropbtn"> General Information </a> </button>
+                <div class="dropdown-content">
+                    <a href="challenge_rules.html"> Challenge Rules </a>
+                    <a href="faq.html"> FAQ </a>
+                    <a href="challenge_creator.html"> Challenge Creator</a>
+                </div>
+            </div>
+            <div class="dropdown"  id="link-games">
+                <button class="dropbtn"> Challenges </a> </button>
+                <div class="dropdown-content">
+                    <a href="horror_games.html"> Horror </a>
+                    <a href="mix_games.html"> Mixed Genre </a>
+                </div>
+            </div>
+            <div class="dropdown"  id="link-contact">
+                <button class="dropdown">  <a href="contact.html" class="active">  Contact </a> </button>
+            </div>
+        </div>
     </header>
-    <section class="test">
-    <div>
-        <h1>Gametober Creator</h1>
-        <p> Hello! My name is Delany, and I created this goofy challenge!</p>
-        <p> Click the link bellow to email me!</p>
-        <p> <a href="mailto: drm377@drexel.edu?subject=GameTober">E-Mail</a></p>
-    </div>
-    <div>
-        <h1>GameHogg44</h1>
-        <p> Special Thanks to you Hogg! Without him GameTober would not exist. He doesnt stream often, but when he does it is a blast. </p>
-        <a href="https://www.youtube.com/@gamehog44"> Youtube </a>
-        <a href="https://www.twitch.tv/gamehog44"> Twitch </a>
-        <a href="twitter.com/gamehog44"> X </a>
-    </div>
+    <section>
+        <div>
+            <h1>Gametober Creator</h1>
+            <p> Hello! My name is Delany, and I created this goofy challenge!</p>
+            <p> Click the icon bellow to email me!</p>
+            <p> <a href="mailto: drm377@drexel.edu?subject=GameTober"><img src="img/Mail.svg" alt="mail logo" height="60px" width="100%"></a></p>
+        </div>
+        <div class="Hogg">
+            <h1>GameHogg44</h1>
+            <p> Special Thanks to you Hogg! Without him GameTober would not exist. He doesnt stream often, but when he does it is a blast. </p>
+            <div class="contacts">
+                <a href="https://www.youtube.com/@gamehog44" target="_blank" id="youtube"> <img src="img/Youtube.svg" alt="youtube logo" height="40px"> </a>
+                <a href="https://www.twitch.tv/gamehog44" target="_blank" id="twitch"> <img src="img/Twitch.svg" alt="twitch logo" height="40px"> </a>
+            </div>
+        </div>
     </section>
     <footer>
         <p> Special Thanks to <a href="https://drexel.edu/cci/"> Drexel University CCI Program! </a></p> 
+        <section>
+            <a href="https://validator.w3.org/nu/?doc=Your_Netlify_URL_Goes_Here" target="_blank"><img src="img/html-logo.svg" alt="Valid HTML 5" height="30px" width="100%"></a>
+        </section>
      </footer>
 </body>
 <script src="js/scripts-dist.js"></script>

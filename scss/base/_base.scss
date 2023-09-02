@@ -2,3 +2,31 @@
     Base
 ============= */
 
+body{
+    background-color: var(--Lgrey);
+    .base{
+        display: grid;
+        height: 100%;
+        grid-template-rows: repeat(3, Auto FIll AutoS ) ;
+        grid-template-areas: 
+        "h"
+        "s"
+        "f";
+    }
+}
+
+
+header{
+    grid-area: h;
+    background-color: var(--grey);
+}
+section{
+    grid-area: s;
+    background-color: var(--white);
+    padding: 16px
+
+}
+footer{
+    grid-area: f;
+    background-color: var(--grey);
+}

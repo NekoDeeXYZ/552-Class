@@ -1,0 +1,28 @@
+/* =============
+    Contact Page
+============= */
+
+
+.Hogg{
+    background-color: var(--Lgreen);
+    border-style: double;
+    border-color: var(--Dgreen);
+    H1{
+        color: var(--Dgreen);
+    }
+    .contacts{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(3, Auto);
+        grid-template-areas: "T . YT" ;
+        background-color: var(--Lgreen);
+       }
+       #twitch{
+           grid-area: T;
+       }
+       #youtube{
+           grid-area: YT;
+       }
+       
+}

@@ -16,7 +16,9 @@ html {
   --Dpurp: #1A090D;
   --purp: #4A314D;
   --Lpurp: #6B6570;
+  --Lgreen: #d2e2c5;
   --Mgreen: #A8BA9A;
+  --Dgreen: #627752;
   --NEON: #ACE894;
   --orange: #EB5E28;
   --Dgrey: #252422;
@@ -341,111 +343,104 @@ template {
 /* =============
     Base
 ============= */
+body {
+  background-color: var(--Lgrey);
+}
+body .base {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-rows: (Auto FIll AutoS)[3];
+  grid-template-rows: repeat(3, Auto FIll AutoS);
+      grid-template-areas: "h" "s" "f";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h;
+  background-color: var(--grey);
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: s;
+  background-color: var(--white);
+  padding: 16px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: f;
+  background-color: var(--grey);
+}
+
 /* =============
     Typography
 ============= */
-body h1 {
+body header {
+  font-family: "Syne", sans-serif;
+  font-size: medium;
+  color: var(--LLgrey);
+  padding: 10px;
+}
+body header h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: xx-large;
+  color: var(--NEON);
+  text-align: center;
+  border: 3px;
+  border-style: inset;
+  border-color: var(--grey);
+  background-color: var(--Dgrey);
+}
+body header h1 a:link, body header h1 a:visited {
+  color: var(--Mgreen);
+  text-decoration: none;
+}
+body header h1 a:hover, body header h1 a:active {
+  color: var(--NEON);
+  text-decoration: none;
+}
+body section h1 {
   font-family: "Syne Mono", monospace;
   font-size: large;
   color: var(--Dgrey);
 }
-body h2 {
+body section h2 {
   font-family: "Syne Mono", monospace;
   font-size: large;
   color: var(--grey);
 }
-body p {
+body section p {
   font-family: "Syne", sans-serif;
   font-size: medium;
 }
-
-.test .test-area-1 {
-  background-color: var(--Lpurp);
+body footer {
+  font-family: "Syne", sans-serif;
+  font-size: medium;
+  text-align: center;
+  color: var(--LLgrey);
+  padding: 10px;
 }
-.test .test-area-1 #test11 {
-  font-family: "Annie Use Your Telescope", cursive;
-  color: var(--NEON);
+body footer p {
+  border-bottom: 3px solid var(--Dgrey);
+  border-top: 3px solid var(--Dgrey);
 }
-.test .test-area-1 #test12 {
-  font-family: "Gloria Hallelujah", cursive;
-  color: var(--Dpurp);
-}
-.test .test-area-1 #test13 {
-  font-family: "Permanent Marker", cursive;
-  color: var(--purp);
-  background-color: var(--Mgreen);
-}
-.test .test-area-1 #test14 {
-  font-family: "Schoolbell", cursive;
-  color: var(--Lpurp);
-  background-color: var(--Dpurp);
-}
-.test .test-area-1 #test15 {
-  font-family: "Caveat Brush", cursive;
-  color: var(--NEON);
-  background-color: var(--Dpurp);
-}
-.test .test-area-1 #test16 {
-  font-family: "Advent Pro", sans-serif;
-  color: var(--Dpurp);
-  background-color: var(--NEON);
-}
-.test .test-area-1 #test17 {
-  font-family: "Nothing You Could Do", cursive;
+body footer p a:link, body footer p a:visited {
   color: var(--Mgreen);
-  background-color: var(--purp);
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--Mgreen);
 }
-.test .test-area-2 {
-  background-color: var(--Lgrey);
-}
-.test .test-area-2 #test21 {
-  font-family: "Creepster", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Mgreen);
-  background-color: var(--Dgrey);
-}
-.test .test-area-2 #test22 {
-  font-family: "Handlee", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Dpurp);
-  background-color: var(--grey);
-}
-.test .test-area-2 #test23 {
-  font-family: "Nosifer", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Mgreen);
-  background-color: var(--grey);
-}
-.test .test-area-2 #test24 {
-  font-family: "Press Start 2P", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Mgreen);
-  background-color: var(--LLgrey);
-}
-.test .test-area-2 #test25 {
-  font-family: "Rubik Glitch", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--NEON);
-  background-color: var(--Dgrey);
-}
-.test .test-area-2 #test26 {
-  font-family: "Rubik Wet Paint", cursive;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Dgrey);
-  background-color: var(--LLgrey);
-}
-.test .test-area-2 #test27 {
-  font-family: "Syne Mono", monospace;
-  text-align: center;
-  font-size: x-large;
-  color: var(--Lgrey);
-  background-color: var(--grey);
+body footer p a:hover, body footer p a:active {
+  color: var(--white);
+  text-decoration: none;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--Mgreen);
 }
 
 /* =============
@@ -477,11 +472,84 @@ textarea {
 /* =============
     Header
 ============= */
-header h1 {
-  font-family: "Syne Tactile", cursive;
-  font-size: xx-large;
-  color: var(--Dgrey);
+header .Buttons {
+  overflow: hidden;
+  background-color: var(--Mgreen);
+  display: block;
+}
+header .buttons a {
+  float: left;
+  font-family: "Syne", sans-serif;
+  font-size: medium;
+  color: var(--Mgreen);
   text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+header .dropdown {
+  background-color: var(--Mgreen);
+  color: var(--Dgrey);
+  padding: 3px;
+  font-size: medium;
+  border: none;
+  outline: none;
+  float: left;
+  overflow: hidden;
+}
+header .dropdown a:link, header .dropdown a:visited {
+  color: var(--Dgrey);
+  text-decoration: none;
+}
+header .dropdown a:hover {
+  background-color: var(--white);
+  color: var(--Dgrey);
+  text-decoration: none;
+}
+header .dropdown a:active {
+  background-color: var(--LLgrey);
+  text-decoration: none;
+}
+header .dropbtn {
+  font-size: medium;
+  color: var(--Dgrey);
+  font-family: inherit;
+  background-color: inherit;
+  margin: 0;
+  padding: 3px;
+  outline: none;
+  border: none;
+}
+header .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--grey);
+  -webkit-box-shadow: 0px 8px 16px 0px var(--black);
+          box-shadow: 0px 8px 16px 0px var(--black);
+  z-index: 1;
+}
+header .dropdown-content a:link, header .dropdown-content a:visited {
+  color: var(--Mgreen);
+}
+header .dropdown-content a:hover, header .dropdown-content a:active {
+  background-color: var(--Dgrey);
+  color: var(--Mgreen);
+}
+header .dropdown-content a {
+  float: none;
+  padding: 3px 3px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+header .dropdown:hover .dropdown-content {
+  display: block;
+}
+header .buttons a:hover, header .dropdown:hover .dropbtn {
+  background-color: var(--LLgrey);
+}
+header .Buttons a.active {
+  background-color: var(--Dgreen);
+  text-decoration: none;
 }
 
 /* =============
