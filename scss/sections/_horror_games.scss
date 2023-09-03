@@ -1,0 +1,37 @@
+/* =============
+    Horror games 
+============= */
+button{
+    text-align: center;
+}
+.collapsible{
+    background-color: var(--Mgreen);
+    color: var(--black);
+    padding 15px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+.active, .collapsible:hover{
+    background-color: var(--Lgreen);
+    color: var(--black);
+}
+.w1{
+    display: none;
+    overflow: hidden;
+    background-color: var(--Lgreen);
+}
+
+
+.Challenge_main{
+background-color: var(--white);
+border-style: solid;
+border: 2px;
+border-color: var(--Mgreen);
+}
+.g{
+    H3{
+        font-size: larger;
+    }
+}
