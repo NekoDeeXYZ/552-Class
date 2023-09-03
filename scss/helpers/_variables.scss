@@ -16,22 +16,45 @@ $screen-lg-min: 1024px;
 $screen-xl-min: 1200px;
 
 
-// Colors vars
+// Colors
 :root {
+  --blackM: #000000;
+  --whiteM: #ffffff;
+
+  --LgreenM: #d2e2c5;
+  --MgreenM: #A8BA9A;
+  --DgreenM: #627752; 
+
+  --DgreyM: #252422;
+  --greyM: #403D39;
+  --LgreyM: #CCC5B9;
+  --LLgreyM: #FFFCF2;
+  
+// light mode:
   --black: #000000;
   --white: #ffffff;
-  --Dpurp: #1A090D;
-  --purp: #4A314D;
-  --Lpurp: #6B6570;
+
   --Lgreen: #d2e2c5;
   --Mgreen: #A8BA9A;
   --Dgreen: #627752; 
-  --NEON: #ACE894;
-  //color theme alternative
-  --orange: #EB5E28;
+
   --Dgrey: #252422;
   --grey: #403D39;
   --Lgrey: #CCC5B9;
   --LLgrey: #FFFCF2;
+
 }
 
+[data-dark-mode]{
+  --black: #FFFCF2;
+  --white:#252422;
+
+  --Lgreen: #627752;
+  --Mgreen: #A8BA9A;
+  --Dgreen: #d2e2c5; 
+
+  --Dgrey: #FFFCF2;
+  --grey: #CCC5B9;
+  --Lgrey: #403D39;
+  --LLgrey: #252422;
+}

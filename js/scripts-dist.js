@@ -1,0 +1,1 @@
+const toggleButton=document.querySelector(".btn-toggle");toggleButton.addEventListener("click",(function(){document.querySelector("html").toggleAttribute("data-dark-mode")}));

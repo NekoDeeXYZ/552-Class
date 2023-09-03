@@ -1,0 +1,14 @@
+/* =============
+    Contact Page
+============= */
+.Hogg {
+  background-color: var(--Lgreen);
+  border-style: double;
+  border-color: var(--Dgreen);
+}
+.Hogg H1 {
+  color: var(--Dgreen);
+}
+.Hogg .contacts {
+  padding: 5px;
+}

@@ -3,30 +3,36 @@
 ============= */
 
 body{
-    background-color: var(--Lgrey);
+    background-color: var(--LgreyM);
+    height: 100%;
     .base{
         display: grid;
         height: 100%;
-        grid-template-rows: repeat(3, Auto FIll AutoS ) ;
+        grid-template-rows: repeat(3, Auto 90% Auto ) ;
         grid-template-areas: 
         "h"
         "s"
         "f";
     }
+    header{
+        grid-area: h;
+        background-color: var(--greyM);
+    }
+    section{
+        grid-area: s;
+        padding: 16px;
+        padding-bottom: 40px;
+    }
+    footer{
+        grid-area: f;
+        background-color: var(--greyM);
+    }
+    button{
+        background-color: var(--MgreenM);
+        color: var(--DgreyM);
+        font-family: inherit;
+    }
 }
 
 
-header{
-    grid-area: h;
-    background-color: var(--grey);
-}
-section{
-    grid-area: s;
-    background-color: var(--white);
-    padding: 16px
 
-}
-footer{
-    grid-area: f;
-    background-color: var(--grey);
-}

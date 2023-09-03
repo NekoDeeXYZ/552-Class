@@ -11,20 +11,36 @@ html {
     Variables
 ============= */
 :root {
+  --blackM: #000000;
+  --whiteM: #ffffff;
+  --LgreenM: #d2e2c5;
+  --MgreenM: #A8BA9A;
+  --DgreenM: #627752;
+  --DgreyM: #252422;
+  --greyM: #403D39;
+  --LgreyM: #CCC5B9;
+  --LLgreyM: #FFFCF2;
   --black: #000000;
   --white: #ffffff;
-  --Dpurp: #1A090D;
-  --purp: #4A314D;
-  --Lpurp: #6B6570;
   --Lgreen: #d2e2c5;
   --Mgreen: #A8BA9A;
   --Dgreen: #627752;
-  --NEON: #ACE894;
-  --orange: #EB5E28;
   --Dgrey: #252422;
   --grey: #403D39;
   --Lgrey: #CCC5B9;
   --LLgrey: #FFFCF2;
+}
+
+[data-dark-mode] {
+  --black: #FFFCF2;
+  --white:#252422;
+  --Lgreen: #627752;
+  --Mgreen: #A8BA9A;
+  --Dgreen: #d2e2c5;
+  --Dgrey: #FFFCF2;
+  --grey: #CCC5B9;
+  --Lgrey: #403D39;
+  --LLgrey: #252422;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -344,37 +360,40 @@ template {
     Base
 ============= */
 body {
-  background-color: var(--Lgrey);
+  background-color: var(--LgreyM);
+  height: 100%;
 }
 body .base {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (Auto FIll AutoS)[3];
-  grid-template-rows: repeat(3, Auto FIll AutoS);
+  -ms-grid-rows: (Auto 90% Auto)[3];
+  grid-template-rows: repeat(3, Auto 90% Auto);
       grid-template-areas: "h" "s" "f";
 }
-
-header {
+body header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: h;
-  background-color: var(--grey);
+  background-color: var(--greyM);
 }
-
-section {
+body section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s;
-  background-color: var(--white);
   padding: 16px;
+  padding-bottom: 40px;
 }
-
-footer {
+body footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: f;
-  background-color: var(--grey);
+  background-color: var(--greyM);
+}
+body button {
+  background-color: var(--MgreenM);
+  color: var(--DgreyM);
+  font-family: inherit;
 }
 
 /* =============
@@ -383,64 +402,97 @@ footer {
 body header {
   font-family: "Syne", sans-serif;
   font-size: medium;
-  color: var(--LLgrey);
+  color: var(--LLgreyM);
   padding: 10px;
 }
 body header h1 {
   font-family: "Permanent Marker", cursive;
   font-size: xx-large;
-  color: var(--NEON);
+  color: var(--MgreenM);
   text-align: center;
   border: 3px;
   border-style: inset;
-  border-color: var(--grey);
-  background-color: var(--Dgrey);
+  border-color: var(--greyM);
+  background-color: var(--DgreyM);
 }
 body header h1 a:link, body header h1 a:visited {
-  color: var(--Mgreen);
+  color: var(--MgreenM);
   text-decoration: none;
 }
 body header h1 a:hover, body header h1 a:active {
-  color: var(--NEON);
+  color: var(--whiteM);
   text-decoration: none;
+}
+body section {
+  background-color: var(--white);
 }
 body section h1 {
   font-family: "Syne Mono", monospace;
-  font-size: large;
-  color: var(--Dgrey);
+  font-size: larger;
+  color: var(--Dgreen);
+  background-color: inherit;
+  text-align: center;
 }
 body section h2 {
   font-family: "Syne Mono", monospace;
   font-size: large;
-  color: var(--grey);
+  color: var(--Dgrey);
+  background-color: inherit;
+  text-align: center;
+}
+body section h3 {
+  font-family: "Syne", sans-serif;
+  font-size: large;
+  color: var(--Dgrey);
+  background-color: inherit;
+  text-align: center;
 }
 body section p {
   font-family: "Syne", sans-serif;
   font-size: medium;
+  color: var(--black);
+  background-color: inherit;
+  text-align: center;
+}
+body section .FAQ {
+  padding: 5px;
+  border-style: solid;
+  border-color: var(--Mgreen);
+  background-color: var(--Lgreen);
+}
+body section .FAQ h2 {
+  background-color: var(--LLgreen);
+  font-size: xx-large;
+  text-align: center;
+  text-decoration: underline;
+}
+body section .note p {
+  font-size: larger;
+  font-family: "Syne Tactile", cursive;
 }
 body footer {
   font-family: "Syne", sans-serif;
   font-size: medium;
   text-align: center;
-  color: var(--LLgrey);
+  color: var(--LLgreyM);
   padding: 10px;
 }
 body footer p {
-  border-bottom: 3px solid var(--Dgrey);
-  border-top: 3px solid var(--Dgrey);
+  border-bottom: 3px solid var(--DgreyM);
+  border-top: 3px solid var(--DgreyM);
 }
 body footer p a:link, body footer p a:visited {
-  color: var(--Mgreen);
+  color: var(--MgreenM);
   -webkit-text-decoration: wavy;
           text-decoration: wavy;
   text-decoration-thickness: 3px;
-  text-decoration-color: var(--Mgreen);
+  text-decoration-color: var(--MgreenM);
 }
 body footer p a:hover, body footer p a:active {
-  color: var(--white);
+  color: var(--whiteM);
   text-decoration: none;
   text-decoration-thickness: 3px;
-  text-decoration-color: var(--Mgreen);
+  text-decoration-color: var(--MgreenM);
 }
 
 /* =============
@@ -472,23 +524,26 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  position: sticky;
+}
 header .Buttons {
   overflow: hidden;
-  background-color: var(--Mgreen);
+  background-color: var(--MgreenM);
   display: block;
 }
 header .buttons a {
   float: left;
   font-family: "Syne", sans-serif;
   font-size: medium;
-  color: var(--Mgreen);
+  color: var(--MgreenM);
   text-align: center;
   padding: 5px 5px;
   text-decoration: none;
 }
 header .dropdown {
-  background-color: var(--Mgreen);
-  color: var(--Dgrey);
+  background-color: var(--MgreenM);
+  color: var(--DgreyM);
   padding: 3px;
   font-size: medium;
   border: none;
@@ -497,21 +552,31 @@ header .dropdown {
   overflow: hidden;
 }
 header .dropdown a:link, header .dropdown a:visited {
-  color: var(--Dgrey);
+  color: var(--DgreyM);
   text-decoration: none;
 }
 header .dropdown a:hover {
-  background-color: var(--white);
-  color: var(--Dgrey);
+  background-color: var(--whiteM);
+  color: var(--DgreyM);
   text-decoration: none;
 }
 header .dropdown a:active {
-  background-color: var(--LLgrey);
+  background-color: var(--LLgreyM);
   text-decoration: none;
+}
+header .darkmode {
+  background-color: var(--MgreenM);
+  color: var(--DgreyM);
+  padding: 3px;
+  font-size: medium;
+  border: none;
+  outline: none;
+  float: right;
+  overflow: hidden;
 }
 header .dropbtn {
   font-size: medium;
-  color: var(--Dgrey);
+  color: var(--DgreyM);
   font-family: inherit;
   background-color: inherit;
   margin: 0;
@@ -522,17 +587,17 @@ header .dropbtn {
 header .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--grey);
-  -webkit-box-shadow: 0px 8px 16px 0px var(--black);
-          box-shadow: 0px 8px 16px 0px var(--black);
+  background-color: var(--greyM);
+  -webkit-box-shadow: 0px 8px 16px 0px var(--blackM);
+          box-shadow: 0px 8px 16px 0px var(--blackM);
   z-index: 1;
 }
 header .dropdown-content a:link, header .dropdown-content a:visited {
-  color: var(--Mgreen);
+  color: var(--MgreenM);
 }
 header .dropdown-content a:hover, header .dropdown-content a:active {
-  background-color: var(--Dgrey);
-  color: var(--Mgreen);
+  background-color: var(--DgreyM);
+  color: var(--MgreenM);
 }
 header .dropdown-content a {
   float: none;
@@ -545,13 +610,51 @@ header .dropdown:hover .dropdown-content {
   display: block;
 }
 header .buttons a:hover, header .dropdown:hover .dropbtn {
-  background-color: var(--LLgrey);
+  background-color: var(--LLgreyM);
 }
 header .Buttons a.active {
-  background-color: var(--Dgreen);
+  background-color: var(--DgreenM);
   text-decoration: none;
 }
 
 /* =============
     Footer
 ============= */
+/* =============
+    Darkmode
+============= */
+/* =============
+    Contact Page
+============= */
+.Hogg {
+  background-color: var(--Lgreen);
+  border-style: double;
+  border-color: var(--Dgreen);
+}
+.Hogg h1 {
+  color: var(--Dgreen);
+}
+
+.contacts {
+  padding: 5px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+  grid-template-columns: repeat(8, 1fr);
+      grid-template-areas: ". . . YT TH . . .";
+}
+
+#YT {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: YT;
+  text-align: center;
+}
+
+#TH {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: TH;
+  text-align: center;
+}

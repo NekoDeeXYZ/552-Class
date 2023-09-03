@@ -12,64 +12,97 @@ body{
         h1{
             font-family: 'Permanent Marker', cursive;
             font-size:xx-large;
-            color: var(--NEON);
+            color: var(--MgreenM);
             text-align: center;
             a:link, a:visited{ 
-                color: var(--Mgreen);
+                color: var(--MgreenM);
                 text-decoration:none;
             }
             a:hover, a:active{ 
-                color: var(--NEON);
+                color: var(--whiteM);
                 text-decoration: none;
             }
             border: 3px;
             border-style: inset;
-            border-color: var(--grey);
-            background-color: var(--Dgrey);
+            border-color: var(--greyM);
+            background-color: var(--DgreyM);
         }
         font-family: 'Syne', sans-serif;
         font-size: medium;
-        color: var(--LLgrey);
+        color: var(--LLgreyM);
         padding: 10px;
     
     }
     section{
+        background-color: var(--white);
         h1{
             font-family: 'Syne Mono', monospace;
-            font-size: large;
-            color: var(--Dgrey);
+            font-size: larger;
+            color: var(--Dgreen);
+            background-color: inherit;
+            text-align: center;
         }
         h2{
             font-family: 'Syne Mono', monospace;
             font-size: large;
-            color: var(--grey); 
+            color: var(--Dgrey);
+            background-color: inherit;
+            text-align: center;
+        }
+        h3{
+            font-family: 'Syne', sans-serif;
+            font-size: large;
+            color: var(--Dgrey);
+            background-color: inherit;
+            text-align: center;
         }
         p{
             font-family: 'Syne', sans-serif;
             font-size: medium;
+            color: var(--black);
+            background-color: inherit;
+            text-align: center;
+        }
+        .FAQ{
+            padding: 5px;
+            border-style: solid;
+            border-color: var(--Mgreen);
+            background-color: var(--Lgreen);
+            h2{
+                background-color: var(--LLgreen);
+                font-size: xx-large;
+                text-align: center;
+                text-decoration: underline;
+            }
+        } 
+        .note{
+            p{
+                font-size: larger;
+                font-family: 'Syne Tactile', cursive;
+            } 
         }
     }
     footer{
         p{
             a:link, a:visited{ 
-                color: var(--Mgreen);
+                color: var(--MgreenM);
                 text-decoration: wavy;
                 text-decoration-thickness: 3px;
-                text-decoration-color: var(--Mgreen);
+                text-decoration-color: var(--MgreenM);
             }
             a:hover, a:active{ 
-                color: var(--white);
+                color: var(--whiteM);
                 text-decoration: none;
                 text-decoration-thickness: 3px;
-                text-decoration-color: var(--Mgreen);
+                text-decoration-color: var(--MgreenM);
             }
-            border-bottom: 3px solid var(--Dgrey);
-            border-top: 3px solid var(--Dgrey);
+            border-bottom: 3px solid var(--DgreyM);
+            border-top: 3px solid var(--DgreyM);
         }
         font-family: 'Syne', sans-serif;
         font-size: medium;
         text-align: center;
-        color: var(--LLgrey);
+        color: var(--LLgreyM);
         padding: 10px;
     }
 }
