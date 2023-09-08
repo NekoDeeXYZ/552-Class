@@ -360,42 +360,120 @@ template {
     Base
 ============= */
 body {
-  background-color: var(--LgreyM);
   height: 100%;
+  background-image: url(img/Background.svg);
+  background-color: var(--DgreyM);
 }
 body .base {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-rows: (Auto 90% Auto)[3];
-  grid-template-rows: repeat(3, Auto 90% Auto);
-      grid-template-areas: "h" "s" "f";
+  -ms-grid-rows: auto 90% auto;
+  grid-template-rows: auto 90% auto;
+  -ms-grid-columns: Repeat(3, auto);
+  grid-template-columns: Repeat(3, auto);
+      grid-template-areas: "h h h" "s s s" "f f f";
 }
-body header {
+
+header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: h;
   background-color: var(--greyM);
 }
-body section {
+
+section {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: s;
   padding: 16px;
   padding-bottom: 40px;
 }
-body footer {
+
+footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: f;
   background-color: var(--greyM);
 }
-body button {
+
+button {
   background-color: var(--MgreenM);
   color: var(--DgreyM);
   font-family: inherit;
 }
 
+@media screen and (min-width: 650px) {
+  body {
+    height: 100%;
+    background-image: url(img/Background.svg);
+  }
+  body .base {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: Auto 90% Auto;
+    grid-template-rows: Auto 90% Auto;
+    -ms-grid-columns: auto 90% auto;
+    grid-template-columns: auto 90% auto;
+        grid-template-areas: "h h h" ". s ." "f f f";
+  }
+  body section {
+    max-width: 900px;
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+@media screen and (min-width: 950px) {
+  body {
+    height: 100%;
+    background-image: url(img/Background.svg);
+  }
+  body .base {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: Auto 90% Auto;
+    grid-template-rows: Auto 90% Auto;
+    -ms-grid-columns: auto 900px auto;
+    grid-template-columns: auto 900px auto;
+        grid-template-areas: "h h h" ". s ." "f f f";
+  }
+  body section {
+    max-width: 900px;
+  }
+  header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+  footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
 /* =============
     Typography
 ============= */
@@ -616,12 +694,46 @@ header .Buttons a.active {
   background-color: var(--DgreenM);
   text-decoration: none;
 }
+header .ButtHome {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1px auto 1px;
+  grid-template-columns: 1px auto 1px;
+      grid-template-areas: ". Z .";
+}
+@media screen and (min-width: 650px) {
+  header .ButtHome {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 90% auto;
+    grid-template-columns: auto 90% auto;
+    grid-area: ". Z .";
+  }
+}
+@media screen and (min-width: 950px) {
+  header .ButtHome {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 900px auto;
+    grid-template-columns: auto 900px auto;
+    grid-area: ". Z .";
+  }
+  header .Buttons {
+    max-width: 900px;
+  }
+}
+header .EMPTY {
+  grid-area: E;
+  min-width: 1px;
+}
+header .Buttons {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: Z;
+}
 
 /* =============
     Footer
-============= */
-/* =============
-    Darkmode
 ============= */
 /* =============
     Contact Page
@@ -658,3 +770,152 @@ header .Buttons a.active {
   grid-area: TH;
   text-align: center;
 }
+
+/* =============
+    Horror games 
+============= */
+button {
+  text-align: center;
+}
+
+.collapsible {
+  background-color: var(--Mgreen);
+  color: var(--DgreyM);
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  border: 5px;
+  border-color: var(--Mgreen);
+}
+
+.active {
+  background-color: var(--Mgreen);
+  color: var(--DgreyM);
+}
+
+.collapsible:hover {
+  background-color: var(--Dgreen);
+  color: var(--LLgrey);
+}
+
+.buttonfood {
+  display: none;
+  overflow: hidden;
+}
+
+.Challenge_main {
+  background-color: var(--white);
+  border-style: solid;
+  border: 5px;
+  border-color: var(--Mgreen);
+}
+
+.g H3 {
+  font-size: larger;
+}
+
+.wg {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-rows: 4, 1fr;
+  grid-template-rows: 4, 1fr;
+  -ms-grid-columns: 1, 1fr;
+  grid-template-columns: 1, 1fr;
+      grid-template-areas: "g1" "g2" "g3" "g4";
+  row-gap: 2px;
+}
+
+@media screen and (min-width: 950px) {
+  body .wg {
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: 1, 1fr;
+    grid-template-rows: 1, 1fr;
+    -ms-grid-columns: 4, 1fr;
+    grid-template-columns: 4, 1fr;
+        grid-template-areas: "g1 g2 g3 g4";
+    -webkit-column-gap: 2px;
+       -moz-column-gap: 2px;
+            column-gap: 2px;
+  }
+}
+.g1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: g1;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  padding: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--Mgreen);
+}
+
+.g2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: g2;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  padding: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--Mgreen);
+}
+
+.g3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: g3;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  padding: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--Mgreen);
+}
+
+.g4 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: g4;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  padding: 5px;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--Mgreen);
+}
+
+@media screen and (min-width: 950px) {
+  body .wg > .g1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  body .wg > .g2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  body .wg > .g3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  body .wg > .g4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+  }
+}
+
+/* =============
+    FAQ Page
+============= */
+/* =============
+    Darkmode
+============= */

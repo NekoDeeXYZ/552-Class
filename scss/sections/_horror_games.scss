@@ -6,32 +6,100 @@ button{
 }
 .collapsible{
     background-color: var(--Mgreen);
-    color: var(--black);
-    padding 15px;
+    color: var(--DgreyM);
+    padding: 15px;
     width: 100%;
     text-align: center;
     outline: none;
-    border: none;
+    border: 5px;
+    border-color: var(--Mgreen);
 }
-.active, .collapsible:hover{
-    background-color: var(--Lgreen);
-    color: var(--black);
+.active{
+    background-color: var(--Mgreen);
+    color: var(--DgreyM);
 }
-.w1{
+.collapsible:hover{
+    background-color: var(--Dgreen);
+    color: var(--LLgrey);
+}
+
+.buttonfood{
     display: none;
     overflow: hidden;
-    background-color: var(--Lgreen);
 }
 
 
 .Challenge_main{
 background-color: var(--white);
 border-style: solid;
-border: 2px;
+border: 5px;
 border-color: var(--Mgreen);
 }
 .g{
     H3{
         font-size: larger;
     }
+}
+
+
+.wg{
+    display: grid;
+    height: 100%;
+    grid-template-rows: (4, 1fr);
+    grid-template-columns: (1, 1fr);
+    grid-template-areas: 
+    "g1"
+    "g2"
+    "g3"
+    "g4";
+    row-gap: 2px;
+    }
+
+@media screen and (min-width: 950px ) {
+    body{
+        .wg{
+            display: grid;
+            height: 100%;
+            grid-template-rows: (1, 1fr);
+            grid-template-columns: (4, 1fr);
+            grid-template-areas: 
+            "g1 g2 g3 g4";
+            column-gap: 2px;
+            }
+        
+    }
+
+}
+
+.g1{
+    grid-area: g1;
+    height: fill;
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--Mgreen);
+}
+.g2{
+    grid-area: g2;
+    height: fill;
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--Mgreen);
+}
+.g3{
+    grid-area: g3;
+    height: fill;
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--Mgreen);
+}
+.g4{
+    grid-area: g4;
+    height: fill;
+    padding: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--Mgreen);
 }

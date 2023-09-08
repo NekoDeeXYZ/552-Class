@@ -4,11 +4,13 @@
 
 body{
     height: 100%;
+    background-image: url(img/Background.svg);
+    background-color: var(--DgreyM);
     .base{
         display: grid;
         height: 100%;
-        grid-template-rows: repeat(3, Auto 90% Auto ) ;
-        grid-template-columns: repeat(3, Auto Auto Auto);
+        grid-template-rows: auto 90% auto;
+        grid-template-columns: Repeat(3, auto);
         grid-template-areas: 
         "h h h"
         "s s s"
@@ -35,47 +37,42 @@ button{
     font-family: inherit;
 }
 
-@media screen and (min-width: 500px ) {
+@media screen and (min-width: 650px) {
     body{
         height: 100%;
         background-image: url(img/Background.svg);
         .base{
             display: grid;
             height: 100%;
-            grid-template-rows: repeat(3, Auto 90% Auto ) ;
-            grid-template-columns: repeat(3, Auto 768px, Auto );
+            grid-template-rows: Auto 90% Auto;
+            grid-template-columns: auto 90% auto;
             grid-template-areas: 
             "h h h"
             ". s ."
             "f f f";
         }
+        section{
+            max-width: 900px;
+        }
     }
-
 }
 
-.w1g{
-    display: grid;
-    height: 100%;
-    grid-template-rows: repeat(1, 1fr) ;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    "g1 g2 g3 g4";
+@media screen and (min-width: 950px ) {
+    body{
+        height: 100%;
+        background-image: url(img/Background.svg);
+        .base{
+            display: grid;
+            height: 100%;
+            grid-template-rows: Auto 90% Auto;
+            grid-template-columns: auto 900px auto;
+            grid-template-areas: 
+            "h h h"
+            ". s ."
+            "f f f";
+        }
+        section{
+            max-width: 900px;
+        }
     }
-
-
-.g1{
-    grid-area: g1;
-    height: fill;
-}
-.g2{
-    grid-area: g2;
-    height: fill;
-}
-.g3{
-    grid-area: g3;
-    height: fill;
-}
-.g4{
-    grid-area: g4;
-    height: fill;
 }

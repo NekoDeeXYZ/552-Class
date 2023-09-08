@@ -4,6 +4,8 @@
 
 header{
   position: sticky;
+
+  //dropdown stuff
     .Buttons{
        overflow: hidden;
        background-color: var(--MgreenM);
@@ -31,9 +33,9 @@ header{
         a:link, a:visited{ color: var(--DgreyM); text-decoration: none;}
         a:hover{background-color: var(--whiteM); color: var(--DgreyM); text-decoration: none;}
         a:active{background-color: var(--LLgreyM); text-decoration: none;}
-      }
+    }
     
-      .darkmode {
+    .darkmode {
         background-color: var(--MgreenM);
         color: var(--DgreyM);
         padding: 3px;
@@ -42,9 +44,9 @@ header{
         outline: none;
         float: right;
         overflow: hidden;
-      }
+    }
 
-      .dropbtn{
+    .dropbtn{
         font-size: medium;
         color: var(--DgreyM);
         font-family: inherit;
@@ -53,9 +55,9 @@ header{
         padding: 3px;
         outline: none;
         border: none;
-      }
+    }
 
-      .dropdown-content {
+    .dropdown-content {
         display: none;
         position: absolute;
         background-color: var(--greyM);
@@ -63,16 +65,51 @@ header{
         a:hover, a:active{background-color: var(--DgreyM); color: var(--MgreenM)}
         box-shadow: 0px 8px 16px 0px var(--blackM);
         z-index: 1;
-      }
-      .dropdown-content a {
+    }
+    .dropdown-content a {
         float: none;
         padding: 3px 3px;
         text-decoration: none;
         display: block;
         text-align: left;
+    }
+    .dropdown:hover .dropdown-content {display: block;}
+    .buttons a:hover, .dropdown:hover .dropbtn{background-color: var(--LLgreyM);}
+    .Buttons a.active{ background-color: var(--DgreenM); text-decoration: none ;}
+
+  //center buttons
+    .ButtHome{
+      display: grid;
+      grid-template-columns: 1px auto 1px;
+      grid-template-areas: 
+      ". Z .";
+    }
+
+    @media screen and (min-width: 650px) {
+      .ButtHome{
+        display: grid;
+        grid-template-columns: auto 90% auto;
+        grid-area: 
+        ". Z .";
+        }
+    }
+    @media screen and (min-width: 950px ) {
+      .ButtHome{
+      display: grid;
+      grid-template-columns: auto 900px auto;
+      grid-area: 
+      ". Z .";
       }
-      .dropdown:hover .dropdown-content {display: block;}
-      .buttons a:hover, .dropdown:hover .dropbtn{background-color: var(--LLgreyM);}
-      .Buttons a.active{ background-color: var(--DgreenM); text-decoration: none ;}
+      .Buttons{
+        max-width: 900px;
+      }
+    }
+    .EMPTY{
+      grid-area: E;
+      min-width: 1px;
+    }
+    .Buttons{
+      grid-area: Z;
+    }
 }
 

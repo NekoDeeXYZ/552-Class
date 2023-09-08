@@ -18,10 +18,10 @@ for (i = 0; i < coll.length; i++){
         this.classList.toggle("active");
 //NOW EAT AND BARF UP YOUR SIBLING MUHAHAHAHAHAHAHAHAHA
         var content = this.nextElementSibling;
-        if (content.style.display === "block"){
+        if (content.style.display === "grid"){
             content.style.display = "none";}
             else {
-                content.style.display = "block";
+                content.style.display = "grid";
             }
         });
 }
