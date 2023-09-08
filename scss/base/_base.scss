@@ -3,36 +3,79 @@
 ============= */
 
 body{
-    background-color: var(--LgreyM);
     height: 100%;
     .base{
         display: grid;
         height: 100%;
         grid-template-rows: repeat(3, Auto 90% Auto ) ;
+        grid-template-columns: repeat(3, Auto Auto Auto);
         grid-template-areas: 
-        "h"
-        "s"
-        "f";
-    }
-    header{
-        grid-area: h;
-        background-color: var(--greyM);
-    }
-    section{
-        grid-area: s;
-        padding: 16px;
-        padding-bottom: 40px;
-    }
-    footer{
-        grid-area: f;
-        background-color: var(--greyM);
-    }
-    button{
-        background-color: var(--MgreenM);
-        color: var(--DgreyM);
-        font-family: inherit;
+        "h h h"
+        "s s s"
+        "f f f";
     }
 }
 
+header{
+    grid-area: h;
+    background-color: var(--greyM);
+}
+section{
+    grid-area: s;
+    padding: 16px;
+    padding-bottom: 40px;
+}
+footer{
+    grid-area: f;
+    background-color: var(--greyM);
+}
+button{
+    background-color: var(--MgreenM);
+    color: var(--DgreyM);
+    font-family: inherit;
+}
+
+@media screen and (min-width: 500px ) {
+    body{
+        height: 100%;
+        background-image: url(img/Background.svg);
+        .base{
+            display: grid;
+            height: 100%;
+            grid-template-rows: repeat(3, Auto 90% Auto ) ;
+            grid-template-columns: repeat(3, Auto 768px, Auto );
+            grid-template-areas: 
+            "h h h"
+            ". s ."
+            "f f f";
+        }
+    }
+
+}
+
+.w1g{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(1, 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "g1 g2 g3 g4";
+    }
 
 
+.g1{
+    grid-area: g1;
+    height: fill;
+}
+.g2{
+    grid-area: g2;
+    height: fill;
+}
+.g3{
+    grid-area: g3;
+    height: fill;
+}
+.g4{
+    grid-area: g4;
+    height: fill;
+}
