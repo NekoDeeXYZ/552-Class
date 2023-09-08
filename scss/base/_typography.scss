@@ -68,9 +68,17 @@ body{
             border-style: solid;
             border-color: var(--Mgreen);
             background-color: var(--Lgreen);
+            h1{
+                background-color: var(--LLgreen);
+                color: var(--Black);
+                font-size: xx-large;
+                text-align: center;
+                text-decoration: underline;
+            }
             h2{
                 background-color: var(--LLgreen);
-                font-size: xx-large;
+                color: var(--Dgreen);
+                font-size: x-large;
                 text-align: center;
                 text-decoration: underline;
             }
