@@ -40,7 +40,16 @@ button{
     color: var(--DgreyM);
     font-family: inherit;
 }
-
+object{
+    height: 100%;
+    width: 95vw;
+    max-width: 400px;
+}
+#Video{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
 @media screen and (min-width: 650px) {
     body{
         height: 100%;
@@ -56,6 +65,10 @@ button{
         }
         section{
             max-width: 900px;
+        }
+        object{
+            height: 100%;
+            max-width: 500px;
         }
     }
 }
@@ -76,11 +89,10 @@ button{
         section{
             max-width: 900px;
         }
+        object{
+            max-width: 700px;
+            height: 100%;
+        }
     }
 }
 
-#Video{
-    display: block;
-    margin: auto;
-    text-align: center;
-}

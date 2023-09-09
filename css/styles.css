@@ -410,6 +410,18 @@ button {
   font-family: inherit;
 }
 
+object {
+  height: 100%;
+  width: 95vw;
+  max-width: 400px;
+}
+
+#Video {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 650px) {
   body {
     height: 100%;
@@ -426,6 +438,10 @@ button {
   }
   body section {
     max-width: 900px;
+  }
+  body object {
+    height: 100%;
+    max-width: 500px;
   }
   header {
     -ms-grid-row: 1;
@@ -460,6 +476,10 @@ button {
   body section {
     max-width: 900px;
   }
+  body object {
+    max-width: 700px;
+    height: 100%;
+  }
   header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -476,12 +496,6 @@ button {
     -ms-grid-column-span: 3;
   }
 }
-#Video {
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
 /* =============
     Typography
 ============= */
