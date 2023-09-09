@@ -41,8 +41,15 @@ body{
                 background-color: var(--MgreenM);
                 text-decoration: none;
             }
+        }  
+        a:link, a:visited{ 
+            color: var(--Dgreen);
+            text-decoration:none;
         }
-    
+        a:hover, a:active{ 
+            color: var(--white);
+            text-decoration: none;
+        }
     }
     section{
         background-color: var(--white);
@@ -74,6 +81,14 @@ body{
             background-color: inherit;
             text-align: center;
         }
+        a:link, a:visited{ 
+            color: var(--Dgreen);
+        }
+        a:hover, a:active{ 
+            color: var(--Lgreen);
+            background-color: var(--Dgreen);
+            text-decoration: none;
+        }
         .FAQ{
             padding: 5px;
             border-style: solid;
@@ -92,6 +107,14 @@ body{
                 font-size: x-large;
                 text-align: center;
                 text-decoration: underline;
+            }
+            a:link, a:visited{ 
+                color: var(--DDgrey);
+            }
+            a:hover, a:active{ 
+                color: var(--Dgreen);
+                background-color: var(--white);
+                text-decoration: none;
             }
         } 
         .note{

@@ -532,6 +532,14 @@ body header .hidden a:hover, body header .hidden a:active {
   background-color: var(--MgreenM);
   text-decoration: none;
 }
+body header a:link, body header a:visited {
+  color: var(--Dgreen);
+  text-decoration: none;
+}
+body header a:hover, body header a:active {
+  color: var(--white);
+  text-decoration: none;
+}
 body section {
   background-color: var(--white);
 }
@@ -563,6 +571,14 @@ body section p {
   background-color: inherit;
   text-align: center;
 }
+body section a:link, body section a:visited {
+  color: var(--Dgreen);
+}
+body section a:hover, body section a:active {
+  color: var(--Lgreen);
+  background-color: var(--Dgreen);
+  text-decoration: none;
+}
 body section .FAQ {
   padding: 5px;
   border-style: solid;
@@ -582,6 +598,14 @@ body section .FAQ h2 {
   font-size: x-large;
   text-align: center;
   text-decoration: underline;
+}
+body section .FAQ a:link, body section .FAQ a:visited {
+  color: var(--DDgrey);
+}
+body section .FAQ a:hover, body section .FAQ a:active {
+  color: var(--Dgreen);
+  background-color: var(--white);
+  text-decoration: none;
 }
 body section .note p {
   font-size: larger;
