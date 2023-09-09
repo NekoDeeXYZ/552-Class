@@ -362,8 +362,11 @@ template {
 ============= */
 body {
   height: 100%;
-  background-image: url(img/Background.svg);
   background-color: var(--DDgreyM);
+}
+body #back {
+  background-image: url(imgWIP.svg);
+  background-size: fill;
 }
 body .base {
   display: -ms-grid;
@@ -410,7 +413,6 @@ button {
 @media screen and (min-width: 650px) {
   body {
     height: 100%;
-    background-image: url(img/Background.svg);
   }
   body .base {
     display: -ms-grid;
@@ -444,7 +446,6 @@ button {
 @media screen and (min-width: 950px) {
   body {
     height: 100%;
-    background-image: url(img/Background.svg);
   }
   body .base {
     display: -ms-grid;
@@ -475,6 +476,12 @@ button {
     -ms-grid-column-span: 3;
   }
 }
+#Video {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 /* =============
     Typography
 ============= */
@@ -500,6 +507,15 @@ body header h1 a:link, body header h1 a:visited {
 }
 body header h1 a:hover, body header h1 a:active {
   color: var(--whiteM);
+  text-decoration: none;
+}
+body header .hidden a:link, body header .hidden a:visited {
+  color: var(--MgreenM);
+  text-decoration: none;
+}
+body header .hidden a:hover, body header .hidden a:active {
+  color: var(--whiteM);
+  background-color: var(--MgreenM);
   text-decoration: none;
 }
 body section {

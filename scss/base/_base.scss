@@ -4,8 +4,12 @@
 
 body{
     height: 100%;
-    background-image: url(img/Background.svg);
     background-color: var(--DDgreyM);
+    
+    #back{
+    background-image: url(img\WIP.svg) ;
+    background-size: fill;
+    }
     .base{
         display: grid;
         height: 100%;
@@ -40,7 +44,6 @@ button{
 @media screen and (min-width: 650px) {
     body{
         height: 100%;
-        background-image: url(img/Background.svg);
         .base{
             display: grid;
             height: 100%;
@@ -60,7 +63,6 @@ button{
 @media screen and (min-width: 950px ) {
     body{
         height: 100%;
-        background-image: url(img/Background.svg);
         .base{
             display: grid;
             height: 100%;
@@ -75,4 +77,10 @@ button{
             max-width: 900px;
         }
     }
+}
+
+#Video{
+    display: block;
+    margin: auto;
+    text-align: center;
 }

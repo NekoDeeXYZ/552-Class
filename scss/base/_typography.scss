@@ -31,6 +31,17 @@ body{
         font-size: medium;
         color: var(--LLgreyM);
         padding: 10px;
+        .hidden{
+            a:link, a:visited{ 
+                color: var(--MgreenM);
+                text-decoration:none;
+            }
+            a:hover, a:active{ 
+                color: var(--whiteM);
+                background-color: var(--MgreenM);
+                text-decoration: none;
+            }
+        }
     
     }
     section{
